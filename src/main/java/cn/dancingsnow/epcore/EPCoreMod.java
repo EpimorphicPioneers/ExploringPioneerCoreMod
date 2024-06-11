@@ -3,7 +3,7 @@ package cn.dancingsnow.epcore;
 import cn.dancingsnow.epcore.client.ClientProxy;
 import cn.dancingsnow.epcore.common.CommonProxy;
 import cn.dancingsnow.epcore.config.EPCoreConfigHolder;
-import cn.dancingsnow.epcore.data.EPCoreLangHandler;
+import cn.dancingsnow.epcore.data.lang.EPCoreLangHandler;
 
 import com.epimorphismmc.monomorphism.MOMod;
 import com.epimorphismmc.monomorphism.datagen.MOProviderTypes;

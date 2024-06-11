@@ -26,6 +26,11 @@ public class CommonProxy implements ICommonProxyBase {
     }
 
     @Override
+    public void registerTagPrefixes() {
+        //        EPCoreTagPrefixes.init();
+    }
+
+    @Override
     public void registerModBusEventHandlers(IEventBus bus) {
         ICommonProxyBase.super.registerModBusEventHandlers(bus);
 
