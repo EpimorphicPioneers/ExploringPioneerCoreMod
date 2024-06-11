@@ -1,9 +1,9 @@
-package com.example.examplemod;
+package cn.dancingsnow.epcore;
 
-import com.example.examplemod.client.ClientProxy;
-import com.example.examplemod.common.CommonProxy;
-import com.example.examplemod.config.ExampleConfigHolder;
-import com.example.examplemod.data.ExampleLangHandler;
+import cn.dancingsnow.epcore.client.ClientProxy;
+import cn.dancingsnow.epcore.common.CommonProxy;
+import cn.dancingsnow.epcore.config.EPCoreConfigHolder;
+import cn.dancingsnow.epcore.data.EPCoreLangHandler;
 
 import com.epimorphismmc.monomorphism.MOMod;
 import com.epimorphismmc.monomorphism.datagen.MOProviderTypes;
@@ -21,15 +21,15 @@ import net.minecraftforge.fml.common.Mod;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ExampleMod.MODID)
-public class ExampleMod extends MOMod<CommonProxy> {
+@Mod(EPCoreMod.MODID)
+public class EPCoreMod extends MOMod<CommonProxy> {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "examplemod";
-    public static final String NAME = "Example Mod";
+    public static final String MODID = "epcore";
+    public static final String NAME = "ExploringPioneerCoreMod";
 
-    public static ExampleMod instance;
+    public static EPCoreMod instance;
 
-    public ExampleMod() {
+    public EPCoreMod() {
         super();
     }
 
@@ -46,7 +46,7 @@ public class ExampleMod extends MOMod<CommonProxy> {
     @Override
     protected void onModConstructed() {
         instance = this;
-        ExampleConfigHolder.init();
+        EPCoreConfigHolder.init();
     }
 
     @Override
@@ -63,7 +63,7 @@ public class ExampleMod extends MOMod<CommonProxy> {
 
     @Override
     public void addDataGenerator(MORegistrate registrate) {
-        registrate.addDataGenerator(MOProviderTypes.MO_LANG, ExampleLangHandler::init);
+        registrate.addDataGenerator(MOProviderTypes.MO_LANG, EPCoreLangHandler::init);
     }
 
     public static ResourceLocation id(String path) {

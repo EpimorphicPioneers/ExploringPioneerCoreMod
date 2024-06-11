@@ -1,10 +1,10 @@
-package com.example.examplemod.data;
+package cn.dancingsnow.epcore.data;
 
 import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;
 
-public class ExampleLangHandler {
+public class EPCoreLangHandler {
 
-    private ExampleLangHandler() {
+    private EPCoreLangHandler() {
         /**/
     }
 

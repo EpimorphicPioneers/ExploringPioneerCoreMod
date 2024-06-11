@@ -1,6 +1,6 @@
-package com.example.examplemod.client;
+package cn.dancingsnow.epcore.client;
 
-import com.example.examplemod.common.CommonProxy;
+import cn.dancingsnow.epcore.common.CommonProxy;
 
 import com.epimorphismmc.monomorphism.proxy.base.IClientProxyBase;
 
