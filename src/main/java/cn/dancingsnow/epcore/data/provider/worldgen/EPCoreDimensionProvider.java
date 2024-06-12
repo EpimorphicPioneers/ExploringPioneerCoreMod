@@ -1,6 +1,7 @@
 package cn.dancingsnow.epcore.data.provider.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
+
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
@@ -32,21 +33,49 @@ public class EPCoreDimensionProvider {
         HolderGetter<DimensionType> dimensionTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseSettings = context.lookup(Registries.NOISE_SETTINGS);
 
-        space(context, DEIMOS_ORBIT, EPCoreDimensionTypeProvider.DEIMOS_ORBIT, dimensionTypes, biomes, noiseSettings);
-        space(context, CERES_ORBIT, EPCoreDimensionTypeProvider.CERES_ORBIT, dimensionTypes, biomes, noiseSettings);
-        space(context, GANYMEDE_ORBIT, EPCoreDimensionTypeProvider.GANYMEDE_ORBIT, dimensionTypes, biomes, noiseSettings);
-        space(context, IO_ORBIT, EPCoreDimensionTypeProvider.IO_ORBIT, dimensionTypes, biomes, noiseSettings);
-
+        space(
+                context,
+                DEIMOS_ORBIT,
+                EPCoreDimensionTypeProvider.DEIMOS_ORBIT,
+                dimensionTypes,
+                biomes,
+                noiseSettings);
+        space(
+                context,
+                CERES_ORBIT,
+                EPCoreDimensionTypeProvider.CERES_ORBIT,
+                dimensionTypes,
+                biomes,
+                noiseSettings);
+        space(
+                context,
+                GANYMEDE_ORBIT,
+                EPCoreDimensionTypeProvider.GANYMEDE_ORBIT,
+                dimensionTypes,
+                biomes,
+                noiseSettings);
+        space(
+                context,
+                IO_ORBIT,
+                EPCoreDimensionTypeProvider.IO_ORBIT,
+                dimensionTypes,
+                biomes,
+                noiseSettings);
     }
 
-    private static void space(BootstapContext<LevelStem> context, ResourceKey<LevelStem> key, ResourceKey<DimensionType> type, HolderGetter<DimensionType> dimensionTypes, HolderGetter<Biome> biomes, HolderGetter<NoiseGeneratorSettings> noiseSettings) {
+    private static void space(
+            BootstapContext<LevelStem> context,
+            ResourceKey<LevelStem> key,
+            ResourceKey<DimensionType> type,
+            HolderGetter<DimensionType> dimensionTypes,
+            HolderGetter<Biome> biomes,
+            HolderGetter<NoiseGeneratorSettings> noiseSettings) {
         context.register(
-            key, new LevelStem(
-                dimensionTypes.getOrThrow(type),
-                new NoiseBasedChunkGenerator(
-                    new FixedBiomeSource(biomes.getOrThrow(EPCoreBiomeDataProvider.SPACE)),
-                    noiseSettings.getOrThrow(EPCoreNoiseGeneratorSettingsProvider.SPACE))
-            )
-        );
+                key,
+                new LevelStem(
+                        dimensionTypes.getOrThrow(type),
+                        new NoiseBasedChunkGenerator(
+                                new FixedBiomeSource(biomes.getOrThrow(EPCoreBiomeDataProvider.SPACE)),
+                                noiseSettings.getOrThrow(EPCoreNoiseGeneratorSettingsProvider.SPACE))));
     }
 }

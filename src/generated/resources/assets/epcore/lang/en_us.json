@@ -9,7 +9,6 @@
   "gtceu.jei.ore_vein.copper": "Copper veins",
   "gtceu.jei.ore_vein.copper_small": "Copper veins",
   "gtceu.jei.ore_vein.diamond": "Diamond veins",
-  "itemGroup.epcore.core": "ExploringPioneerCoreMod",
   "gtceu.jei.ore_vein.electrotine_small": "Electrotine veins",
   "gtceu.jei.ore_vein.galena": "Galena veins",
   "gtceu.jei.ore_vein.garnet_sand": "Garnet sand veins",
@@ -48,5 +47,6 @@
   "gtceu.jei.ore_vein.tetrahedrite_small": "Tetrahedrite veins",
   "gtceu.jei.ore_vein.vermiculite": "Vermiculite veins",
   "gtceu.jei.ore_vein.zeolite": "Zeolite veins",
+  "itemGroup.epcore.core": "ExploringPioneerCoreMod",
   "tagprefix.moon_stone": "Moon Stone %s Ore"
 }

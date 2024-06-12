@@ -1,6 +1,7 @@
 package cn.dancingsnow.epcore.data.provider.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
+
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.SurfaceRuleData;
@@ -23,38 +24,38 @@ public class EPCoreNoiseGeneratorSettingsProvider {
     }
 
     public static void bootstrap(BootstapContext<NoiseGeneratorSettings> context) {
-        context.register(SPACE, new NoiseGeneratorSettings(
-            SIMPLE_NOISE_SETTINGS,
-            Blocks.AIR.defaultBlockState(),
-            Blocks.AIR.defaultBlockState(),
-            none(),
-            SurfaceRuleData.air(),
-            List.of(),
-            0,
-            true,
-            false,
-            false,
-            false
-        ));
+        context.register(
+                SPACE,
+                new NoiseGeneratorSettings(
+                        SIMPLE_NOISE_SETTINGS,
+                        Blocks.AIR.defaultBlockState(),
+                        Blocks.AIR.defaultBlockState(),
+                        none(),
+                        SurfaceRuleData.air(),
+                        List.of(),
+                        0,
+                        true,
+                        false,
+                        false,
+                        false));
     }
 
     public static NoiseRouter none() {
         return new NoiseRouter(
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero(),
-            DensityFunctions.zero()
-        );
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero(),
+                DensityFunctions.zero());
     }
 }

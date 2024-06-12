@@ -1,22 +1,18 @@
 package cn.dancingsnow.epcore.common;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
 import cn.dancingsnow.epcore.common.data.EPCoreBlocks;
 import cn.dancingsnow.epcore.common.data.EPCoreCreativeModeTabs;
+import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
+import cn.dancingsnow.epcore.common.data.worldgen.EPCoreOreVeins;
+import cn.dancingsnow.epcore.common.data.worldgen.EPCoreWorldGenLayers;
 import cn.dancingsnow.epcore.common.worldgen.EPCoreRuleTests;
-import cn.dancingsnow.epcore.data.worldgen.EPCoreOreVeins;
 
-
-import cn.dancingsnow.epcore.data.worldgen.EPCoreWorldGenLayers;
 import com.epimorphismmc.monomorphism.proxy.base.ICommonProxyBase;
 
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
-
-import net.minecraft.resources.ResourceLocation;
-import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 
 import net.minecraft.resources.ResourceLocation;

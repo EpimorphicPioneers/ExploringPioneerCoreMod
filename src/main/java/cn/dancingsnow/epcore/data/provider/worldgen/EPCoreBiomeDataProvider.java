@@ -1,6 +1,7 @@
 package cn.dancingsnow.epcore.data.provider.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
+
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+
 import org.jetbrains.annotations.Nullable;
 
 public class EPCoreBiomeDataProvider {
@@ -34,112 +36,134 @@ public class EPCoreBiomeDataProvider {
 
     public static void bootstrap(BootstapContext<Biome> context) {
         HolderGetter<PlacedFeature> placedFeatures = context.lookup(Registries.PLACED_FEATURE);
-        HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers = context.lookup(Registries.CONFIGURED_CARVER);
-
-        context.register(SPACE, biome(
-                false,
-                0.5f,
-                0,
-                0x000000,
-                0x000000,
-                new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
-                0x3f76e4,
-                0x50533,
-                null,
-                null,
-                new MobSpawnSettings.Builder(),
-                new BiomeGenerationSettings.Builder(placedFeatures, configuredCarvers),
-                null
-            )
-        );
+        HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers =
+                context.lookup(Registries.CONFIGURED_CARVER);
 
         context.register(
-            SPACE_WASTELANDS,
-            biome(
-                false,
-                0.8f,
-                0.0f,
-                0xE6AC84,
-                0xE6AC84,
-                new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
-                0x3f76e4,
-                0x50533,
-                null,
-                null,
-                new MobSpawnSettings.Builder(),
-                caves(placedFeatures, configuredCarvers)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.DRIPSTONE_CLUSTER)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.POINTED_DRIPSTONE),
-                null
-            )
-        );
+                SPACE,
+                biome(
+                        false,
+                        0.5f,
+                        0,
+                        0x000000,
+                        0x000000,
+                        new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
+                        0x3f76e4,
+                        0x50533,
+                        null,
+                        null,
+                        new MobSpawnSettings.Builder(),
+                        new BiomeGenerationSettings.Builder(placedFeatures, configuredCarvers),
+                        null));
 
         context.register(
-            IO,
-            biome(
-                false,
-                0.8f,
-                0.0f,
-                0xE6AC84,
-                0xE6AC84,
-                new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
-                0x3f76e4,
-                0x50533,
-                null,
-                null,
-                new MobSpawnSettings.Builder(),
-                caves(placedFeatures, configuredCarvers)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.DRIPSTONE_CLUSTER)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.POINTED_DRIPSTONE)
-                    .addFeature(GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
-                    .addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, NetherPlacements.BASALT_PILLAR),
-                null
-            )
-        );
+                SPACE_WASTELANDS,
+                biome(
+                        false,
+                        0.8f,
+                        0.0f,
+                        0xE6AC84,
+                        0xE6AC84,
+                        new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
+                        0x3f76e4,
+                        0x50533,
+                        null,
+                        null,
+                        new MobSpawnSettings.Builder(),
+                        caves(placedFeatures, configuredCarvers)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.LARGE_DRIPSTONE)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.DRIPSTONE_CLUSTER)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.POINTED_DRIPSTONE),
+                        null));
 
         context.register(
-            IO_ASH,
-            biome(
-                false,
-                0.8f,
-                0.0f,
-                0xE6AC84,
-                0xE6AC84,
-                new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
-                0x3f76e4,
-                0x50533,
-                null,
-                null,
-                new MobSpawnSettings.Builder(),
-                caves(placedFeatures, configuredCarvers)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.DRIPSTONE_CLUSTER)
-                    .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.POINTED_DRIPSTONE)
-                    .addFeature(GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
-                    .addFeature(GenerationStep.Decoration.LOCAL_MODIFICATIONS, NetherPlacements.BASALT_PILLAR),
-                null
-            )
-        );
+                IO,
+                biome(
+                        false,
+                        0.8f,
+                        0.0f,
+                        0xE6AC84,
+                        0xE6AC84,
+                        new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
+                        0x3f76e4,
+                        0x50533,
+                        null,
+                        null,
+                        new MobSpawnSettings.Builder(),
+                        caves(placedFeatures, configuredCarvers)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.LARGE_DRIPSTONE)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.DRIPSTONE_CLUSTER)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.POINTED_DRIPSTONE)
+                                .addFeature(
+                                        GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+                                .addFeature(
+                                        GenerationStep.Decoration.LOCAL_MODIFICATIONS, NetherPlacements.BASALT_PILLAR),
+                        null));
+
+        context.register(
+                IO_ASH,
+                biome(
+                        false,
+                        0.8f,
+                        0.0f,
+                        0xE6AC84,
+                        0xE6AC84,
+                        new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f),
+                        0x3f76e4,
+                        0x50533,
+                        null,
+                        null,
+                        new MobSpawnSettings.Builder(),
+                        caves(placedFeatures, configuredCarvers)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.LARGE_DRIPSTONE)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.DRIPSTONE_CLUSTER)
+                                .addFeature(
+                                        GenerationStep.Decoration.UNDERGROUND_DECORATION,
+                                        CavePlacements.POINTED_DRIPSTONE)
+                                .addFeature(
+                                        GenerationStep.Decoration.LAKES, MiscOverworldPlacements.LAKE_LAVA_SURFACE)
+                                .addFeature(
+                                        GenerationStep.Decoration.LOCAL_MODIFICATIONS, NetherPlacements.BASALT_PILLAR),
+                        null));
     }
 
     public static Biome biome(
-        boolean hasPrecipitation,
-        float temperature,
-        float downfall,
-        int skyColor,
-        int fogColor,
-        AmbientParticleSettings particles,
-        int waterColor,
-        int waterFogColor,
-        @Nullable Integer grassColorOverride,
-        @Nullable Integer foliageColorOverride,
-        MobSpawnSettings.Builder mobSpawnSettings,
-        BiomeGenerationSettings.Builder generationSettings,
-        @Nullable Music backgroundMusic
-    ) {
-        var specoalEffectsBuilder = (new BiomeSpecialEffects.Builder()).waterColor(waterColor).waterFogColor(waterFogColor).fogColor(skyColor).skyColor(fogColor).ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS).backgroundMusic(backgroundMusic);
+            boolean hasPrecipitation,
+            float temperature,
+            float downfall,
+            int skyColor,
+            int fogColor,
+            AmbientParticleSettings particles,
+            int waterColor,
+            int waterFogColor,
+            @Nullable Integer grassColorOverride,
+            @Nullable Integer foliageColorOverride,
+            MobSpawnSettings.Builder mobSpawnSettings,
+            BiomeGenerationSettings.Builder generationSettings,
+            @Nullable Music backgroundMusic) {
+        var specoalEffectsBuilder = (new BiomeSpecialEffects.Builder())
+                .waterColor(waterColor)
+                .waterFogColor(waterFogColor)
+                .fogColor(skyColor)
+                .skyColor(fogColor)
+                .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                .backgroundMusic(backgroundMusic);
         if (grassColorOverride != null) {
             specoalEffectsBuilder.grassColorOverride(grassColorOverride);
         }
@@ -152,13 +176,22 @@ public class EPCoreBiomeDataProvider {
             specoalEffectsBuilder.foliageColorOverride(foliageColorOverride);
         }
 
-        return (new Biome.BiomeBuilder()).hasPrecipitation(hasPrecipitation).temperature(temperature).downfall(downfall).specialEffects(specoalEffectsBuilder.build()).mobSpawnSettings(mobSpawnSettings.build()).generationSettings(generationSettings.build()).build();
+        return (new Biome.BiomeBuilder())
+                .hasPrecipitation(hasPrecipitation)
+                .temperature(temperature)
+                .downfall(downfall)
+                .specialEffects(specoalEffectsBuilder.build())
+                .mobSpawnSettings(mobSpawnSettings.build())
+                .generationSettings(generationSettings.build())
+                .build();
     }
 
-    private static BiomeGenerationSettings.Builder caves(HolderGetter<PlacedFeature> placedFeatures, HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers) {
+    private static BiomeGenerationSettings.Builder caves(
+            HolderGetter<PlacedFeature> placedFeatures,
+            HolderGetter<ConfiguredWorldCarver<?>> configuredCarvers) {
         return new BiomeGenerationSettings.Builder(placedFeatures, configuredCarvers)
-            .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE)
-            .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE_EXTRA_UNDERGROUND)
-            .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON);
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE)
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE_EXTRA_UNDERGROUND)
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON);
     }
 }

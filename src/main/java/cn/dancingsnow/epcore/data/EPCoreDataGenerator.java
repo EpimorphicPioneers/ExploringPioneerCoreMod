@@ -1,10 +1,10 @@
 package cn.dancingsnow.epcore.data;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-
 import cn.dancingsnow.epcore.data.provider.EPCorePlanetProvider;
 import cn.dancingsnow.epcore.data.provider.EPCorePlanetRendererProvider;
 import cn.dancingsnow.epcore.data.provider.EPCoreRegistryProvider;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -26,7 +26,8 @@ public class EPCoreDataGenerator {
 
         generator.addProvider(event.includeClient(), new EPCorePlanetRendererProvider(packOutput));
 
-        generator.addProvider(event.includeServer(), new EPCoreRegistryProvider(packOutput, lookupProvider));
+        generator.addProvider(
+                event.includeServer(), new EPCoreRegistryProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new EPCorePlanetProvider(packOutput));
     }
 }

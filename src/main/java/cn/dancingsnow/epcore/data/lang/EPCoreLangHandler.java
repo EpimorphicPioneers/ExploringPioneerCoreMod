@@ -1,9 +1,8 @@
 package cn.dancingsnow.epcore.data.lang;
 
 import cn.dancingsnow.epcore.common.data.EPCoreTagPrefixes;
+import cn.dancingsnow.epcore.common.data.worldgen.EPCoreOreVeins;
 
-
-import cn.dancingsnow.epcore.data.worldgen.EPCoreOreVeins;
 import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;
 
 public class EPCoreLangHandler {

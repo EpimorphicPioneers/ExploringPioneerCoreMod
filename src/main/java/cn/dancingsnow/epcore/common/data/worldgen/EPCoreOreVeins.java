@@ -1,6 +1,7 @@
-package cn.dancingsnow.epcore.data.worldgen;
+package cn.dancingsnow.epcore.common.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
 import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
 
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
@@ -12,33 +13,35 @@ import com.gregtechceu.gtceu.common.data.GTOres;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 
-import earth.terrarium.adastra.AdAstra;
+import earth.terrarium.adastra.api.planets.Planet;
 
 import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Consumer;
 
+@SuppressWarnings("unused")
 public class EPCoreOreVeins {
     public static final Set<OreTranslate> ALL_ORES = new HashSet<>();
 
-    private static final ResourceLocation OVERWORLD = Level.OVERWORLD.location(),
-            NETHER = Level.NETHER.location(),
-            END = Level.END.location();
+    private static final ResourceLocation OVERWORLD = Level.OVERWORLD.location();
+    private static final ResourceLocation NETHER = Level.NETHER.location();
+    private static final ResourceLocation END = Level.END.location();
+
+    private static final ResourceLocation MOON = Planet.MOON.location();
+    private static final ResourceLocation MARS = Planet.MARS.location();
+    private static final ResourceLocation VENUS = Planet.VENUS.location();
+    private static final ResourceLocation MERCURY = Planet.MERCURY.location();
+    private static final ResourceLocation GLACIO = Planet.GLACIO.location();
+
+    private static final ResourceLocation DEIMOS = EPCorePlanets.DEIMOS.location();
+    private static final ResourceLocation CERES = EPCorePlanets.CERES.location();
+    private static final ResourceLocation GANYMEDE = EPCorePlanets.GANYMEDE.location();
+    private static final ResourceLocation IO = EPCorePlanets.IO.location();
+    private static final ResourceLocation ROSE_128b = EPCoreMod.id("rose_128b");
 
     private static final ResourceLocation TWILIGHT_FOREST =
             new ResourceLocation("twilightforest:twilight_forest");
     private static final ResourceLocation AETHER = new ResourceLocation("aether:the_aether");
-
-    private static final ResourceLocation MOON = new ResourceLocation(AdAstra.MOD_ID, "moon"),
-            MARS = new ResourceLocation(AdAstra.MOD_ID, "mars"),
-            VENUS = new ResourceLocation(AdAstra.MOD_ID, "venus"),
-            MERCURY = new ResourceLocation(AdAstra.MOD_ID, "mercury"),
-            GLACIO = new ResourceLocation(AdAstra.MOD_ID, "glacio");
-    private static final ResourceLocation DEIMOS = EPCoreMod.id("deimos"),
-            CERES = EPCoreMod.id("ceres"),
-            GANYMEDE = EPCoreMod.id("ganymede"),
-            IO = EPCoreMod.id("io"),
-            ROSE_128b = EPCoreMod.id("rose_128b");
 
     public static GTOreDefinition DIAMOND = create("diamond", "Diamond veins", "钻石矿脉", vein -> {
         vein.weight(50);

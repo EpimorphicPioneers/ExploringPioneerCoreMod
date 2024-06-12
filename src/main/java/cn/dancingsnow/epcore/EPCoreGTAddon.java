@@ -1,8 +1,7 @@
 package cn.dancingsnow.epcore;
 
+import cn.dancingsnow.epcore.common.data.worldgen.EPCoreOreVeins;
 
-
-import cn.dancingsnow.epcore.data.worldgen.EPCoreOreVeins;
 import com.epimorphismmc.monomorphism.MOGTAddon;
 
 import com.gregtechceu.gtceu.api.addon.GTAddon;
