@@ -5,6 +5,7 @@ import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
 
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gtceu.api.data.worldgen.generator.indicators.SurfaceIndicatorGenerator;
+import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.common.data.GTMaterials;
 import com.gregtechceu.gtceu.common.data.GTOres;
 
@@ -411,22 +412,23 @@ public class EPCoreOreVeins {
                 .surfaceRock(GTMaterials.Olivine)
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
-    public static GTOreDefinition MOLYBDENUM = create("molybdenum", "Molybdenum veins", "钼矿脉", vein -> {
-        vein.weight(10);
-        vein.clusterSize(30);
-        vein.density(0.5F);
-        vein.layer(EPCoreWorldGenLayers.ALL);
-        vein.dimensions(TWILIGHT_FOREST, MOON, CERES, MERCURY);
-        vein.heightRangeUniform(-30, 40);
-        vein.dikeVeinGenerator(generator -> generator
-                .withBlock(GTMaterials.Wulfenite, 2, 10, 40)
-                .withBlock(GTMaterials.Molybdenite, 2, -10, 30)
-                .withBlock(GTMaterials.Molybdenum, 2, -30, 0)
-                .withBlock(GTMaterials.Powellite, 1, -30, 40));
-        vein.surfaceIndicatorGenerator(indicator -> indicator
-                .surfaceRock(GTMaterials.Molybdenum)
-                .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
-    });
+    public static GTOreDefinition MOLYBDENUM =
+            create("molybdenum", "Molybdenum veins", "钼矿脉", vein -> {
+                vein.weight(10);
+                vein.clusterSize(30);
+                vein.density(0.5F);
+                vein.layer(EPCoreWorldGenLayers.ALL);
+                vein.dimensions(TWILIGHT_FOREST, MOON, CERES, MERCURY);
+                vein.heightRangeUniform(-30, 40);
+                vein.dikeVeinGenerator(generator -> generator
+                        .withBlock(GTMaterials.Wulfenite, 2, 10, 40)
+                        .withBlock(GTMaterials.Molybdenite, 2, -10, 30)
+                        .withBlock(GTMaterials.Molybdenum, 2, -30, 0)
+                        .withBlock(GTMaterials.Powellite, 1, -30, 40));
+                vein.surfaceIndicatorGenerator(indicator -> indicator
+                        .surfaceRock(GTMaterials.Molybdenum)
+                        .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
+            });
     public static GTOreDefinition SAPPHIRE = create("sapphire", "Sapphire veins", "蓝宝石矿脉", vein -> {
         vein.weight(60);
         vein.clusterSize(45);
@@ -475,22 +477,23 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
 
-    public static GTOreDefinition QUARTZITE = create("quartzite", "Quartzite veins", "石英岩矿脉", vein -> {
-        vein.weight(20);
-        vein.clusterSize(40);
-        vein.density(0.35F);
-        vein.layer(EPCoreWorldGenLayers.ALL);
-        vein.dimensions(MOON, MARS, IO, VENUS);
-        vein.heightRangeUniform(-30, 60);
-        vein.layeredVeinGenerator(generator -> generator.buildLayerPattern(pattern -> pattern
-                .layer(l -> l.weight(2).mat(GTMaterials.Quartzite).size(2, 4))
-                .layer(l -> l.weight(2).mat(GTMaterials.Barite).size(2, 4))
-                .layer(l -> l.weight(1).mat(GTMaterials.CertusQuartz).size(1, 1))
-                .layer(l -> l.weight(1).mat(GTMaterials.CertusQuartz).size(1, 1))));
-        vein.surfaceIndicatorGenerator(indicator -> indicator
-                .surfaceRock(GTMaterials.Quartzite)
-                .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
-    });
+    public static GTOreDefinition QUARTZITE =
+            create("quartzite", "Quartzite veins", "石英岩矿脉", vein -> {
+                vein.weight(20);
+                vein.clusterSize(40);
+                vein.density(0.35F);
+                vein.layer(EPCoreWorldGenLayers.ALL);
+                vein.dimensions(MOON, MARS, IO, VENUS);
+                vein.heightRangeUniform(-30, 60);
+                vein.layeredVeinGenerator(generator -> generator.buildLayerPattern(pattern -> pattern
+                        .layer(l -> l.weight(2).mat(GTMaterials.Quartzite).size(2, 4))
+                        .layer(l -> l.weight(2).mat(GTMaterials.Barite).size(2, 4))
+                        .layer(l -> l.weight(1).mat(GTMaterials.CertusQuartz).size(1, 1))
+                        .layer(l -> l.weight(1).mat(GTMaterials.CertusQuartz).size(1, 1))));
+                vein.surfaceIndicatorGenerator(indicator -> indicator
+                        .surfaceRock(GTMaterials.Quartzite)
+                        .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
+            });
 
     public static GTOreDefinition MONAZITE = create("monazite", "Monazite veins", "独居石矿脉", vein -> {
         vein.weight(20);
@@ -893,13 +896,19 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
 
+    public static void init() {}
+
     private static GTOreDefinition create(
             String key, String en_name, String cn_name, Consumer<GTOreDefinition> consumer) {
         ALL_ORES.add(new OreTranslate(key, en_name, cn_name));
         return GTOres.create(EPCoreMod.id(key), consumer);
     }
 
-    public static void init() {}
+    public static void removeOreVeins() {
+        Set.copyOf(GTRegistries.ORE_VEINS.keys()).forEach(rl -> {
+            if (!rl.getNamespace().equals(EPCoreMod.MODID)) GTRegistries.ORE_VEINS.remove(rl);
+        });
+    }
 
     public record OreTranslate(String key, String en_name, String cn_name) {
         public String getTranslateKey() {

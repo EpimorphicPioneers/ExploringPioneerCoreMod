@@ -11,12 +11,9 @@ import com.epimorphismmc.monomorphism.proxy.base.ICommonProxyBase;
 import com.gregtechceu.gtceu.api.GTCEuAPI;
 import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
-import com.gregtechceu.gtceu.api.registry.GTRegistries;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.eventbus.api.IEventBus;
-
-import java.util.Set;
 
 public class CommonProxy implements ICommonProxyBase {
 
@@ -48,14 +45,12 @@ public class CommonProxy implements ICommonProxyBase {
     @Override
     public void registerOreDefinitions(
             GTCEuAPI.RegisterEvent<ResourceLocation, GTOreDefinition> event) {
-        Set.copyOf(GTRegistries.ORE_VEINS.keys()).forEach(GTRegistries.ORE_VEINS::remove);
-        EPCoreOreVeins.init();
+        EPCoreOreVeins.removeOreVeins();
     }
 
     @Override
     public void registerModBusEventHandlers(IEventBus bus) {
         ICommonProxyBase.super.registerModBusEventHandlers(bus);
-
         EPCoreRuleTests.init(bus);
     }
 }

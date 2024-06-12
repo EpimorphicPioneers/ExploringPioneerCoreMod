@@ -7,9 +7,7 @@ import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;
 
 public class EPCoreLangHandler {
 
-    private EPCoreLangHandler() {
-        /**/
-    }
+    private EPCoreLangHandler() {}
 
     public static void init(MOLangProvider provider) {
         EPCoreOreVeins.ALL_ORES.forEach(
