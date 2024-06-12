@@ -1,4 +1,17 @@
 {
+  "biome.epcore.io": "IO",
+  "biome.epcore.io_ash": "IO Ash",
+  "biome.epcore.orbit": "space",
+  "biome.epcore.space_wastelands": "space_wastelands",
+  "block.epcore.ceres_stone": "Ceres Stone",
+  "block.epcore.ceres_surface": "Ceres Surface",
+  "block.epcore.deimos_stone": "Deimos Stone",
+  "block.epcore.deimos_surface": "Deimos Surface",
+  "block.epcore.ganymede_stone": "Ganymede Stone",
+  "block.epcore.ganymede_surface": "Ganymede Surface",
+  "block.epcore.io_ash": "IO Ash",
+  "block.epcore.io_stone": "IO Stone",
+  "block.epcore.io_surface": "IO Surface",
   "gtceu.jei.ore_vein.apatite": "Apatite veins",
   "gtceu.jei.ore_vein.basaltic_mineral_sand": "Basaltic mineral sand veins",
   "gtceu.jei.ore_vein.bauxite": "Bauxite veins",
@@ -48,5 +61,12 @@
   "gtceu.jei.ore_vein.vermiculite": "Vermiculite veins",
   "gtceu.jei.ore_vein.zeolite": "Zeolite veins",
   "itemGroup.epcore.core": "ExploringPioneerCoreMod",
-  "tagprefix.moon_stone": "Moon Stone %s Ore"
+  "planet.epcore.ceres": "Ceres",
+  "planet.epcore.ceres_orbit": "Ceres Orbit",
+  "planet.epcore.deimos": "Deimos",
+  "planet.epcore.deimos_orbit": "Deimos Orbit",
+  "planet.epcore.ganymede": "Ganymede",
+  "planet.epcore.ganymede_orbit": "Ganymede Orbit",
+  "planet.epcore.io": "IO",
+  "planet.epcore.io_orbit": "IO Orbit"
 }

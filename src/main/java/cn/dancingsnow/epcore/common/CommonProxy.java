@@ -36,11 +36,6 @@ public class CommonProxy implements ICommonProxyBase {
     }
 
     @Override
-    public void registerTagPrefixes() {
-        //        EPCoreTagPrefixes.init();
-    }
-
-    @Override
     public void registerMaterials(MaterialEvent event) {
         EPCoreMaterials.init();
     }

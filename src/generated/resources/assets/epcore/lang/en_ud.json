@@ -1,4 +1,17 @@
 {
+  "biome.epcore.io": "OI",
+  "biome.epcore.io_ash": "ɥsⱯ OI",
+  "biome.epcore.orbit": "ǝɔɐds",
+  "biome.epcore.space_wastelands": "spuɐןǝʇsɐʍ‾ǝɔɐds",
+  "block.epcore.ceres_stone": "ǝuoʇS sǝɹǝƆ",
+  "block.epcore.ceres_surface": "ǝɔɐɟɹnS sǝɹǝƆ",
+  "block.epcore.deimos_stone": "ǝuoʇS soɯıǝᗡ",
+  "block.epcore.deimos_surface": "ǝɔɐɟɹnS soɯıǝᗡ",
+  "block.epcore.ganymede_stone": "ǝuoʇS ǝpǝɯʎuɐ⅁",
+  "block.epcore.ganymede_surface": "ǝɔɐɟɹnS ǝpǝɯʎuɐ⅁",
+  "block.epcore.io_ash": "ɥsⱯ OI",
+  "block.epcore.io_stone": "ǝuoʇS OI",
+  "block.epcore.io_surface": "ǝɔɐɟɹnS OI",
   "gtceu.jei.ore_vein.apatite": "suıǝʌ ǝʇıʇɐdⱯ",
   "gtceu.jei.ore_vein.basaltic_mineral_sand": "suıǝʌ puɐs ןɐɹǝuıɯ ɔıʇןɐsɐᗺ",
   "gtceu.jei.ore_vein.bauxite": "suıǝʌ ǝʇıxnɐᗺ",
@@ -48,5 +61,12 @@
   "gtceu.jei.ore_vein.vermiculite": "suıǝʌ ǝʇıןnɔıɯɹǝΛ",
   "gtceu.jei.ore_vein.zeolite": "suıǝʌ ǝʇıןoǝZ",
   "itemGroup.epcore.core": "poWǝɹoƆɹǝǝuoıԀbuıɹoןdxƎ",
-  "tagprefix.moon_stone": "ǝɹO %s ǝuoʇS uooW"
+  "planet.epcore.ceres": "sǝɹǝƆ",
+  "planet.epcore.ceres_orbit": "ʇıqɹO sǝɹǝƆ",
+  "planet.epcore.deimos": "soɯıǝᗡ",
+  "planet.epcore.deimos_orbit": "ʇıqɹO soɯıǝᗡ",
+  "planet.epcore.ganymede": "ǝpǝɯʎuɐ⅁",
+  "planet.epcore.ganymede_orbit": "ʇıqɹO ǝpǝɯʎuɐ⅁",
+  "planet.epcore.io": "OI",
+  "planet.epcore.io_orbit": "ʇıqɹO OI"
 }

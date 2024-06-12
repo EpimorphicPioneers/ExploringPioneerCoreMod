@@ -1,4 +1,17 @@
 {
+  "biome.epcore.io": "木卫一",
+  "biome.epcore.io_ash": "木卫一灰烬",
+  "biome.epcore.orbit": "太空",
+  "biome.epcore.space_wastelands": "太空荒地",
+  "block.epcore.ceres_stone": "谷神星地底岩石",
+  "block.epcore.ceres_surface": "谷神星地表岩石",
+  "block.epcore.deimos_stone": "火卫二地底岩石",
+  "block.epcore.deimos_surface": "火卫二地表岩石",
+  "block.epcore.ganymede_stone": "木卫三地底岩石",
+  "block.epcore.ganymede_surface": "木卫三地表岩石",
+  "block.epcore.io_ash": "木卫一灰烬",
+  "block.epcore.io_stone": "木卫一地底岩石",
+  "block.epcore.io_surface": "木卫一地表岩石",
   "gtceu.jei.ore_vein.apatite": "磷灰石矿脉",
   "gtceu.jei.ore_vein.basaltic_mineral_sand": "玄武岩矿砂矿脉",
   "gtceu.jei.ore_vein.bauxite": "铝土矿脉",
@@ -47,5 +60,12 @@
   "gtceu.jei.ore_vein.tetrahedrite_small": "黝铜矿脉",
   "gtceu.jei.ore_vein.vermiculite": "蛭石矿脉",
   "gtceu.jei.ore_vein.zeolite": "沸石矿脉",
-  "tagprefix.moon_stone": "月石%s矿石"
+  "planet.epcore.ceres": "谷神星",
+  "planet.epcore.ceres_orbit": "谷神星轨道",
+  "planet.epcore.deimos": "火卫二",
+  "planet.epcore.deimos_orbit": "火卫二轨道",
+  "planet.epcore.ganymede": "木卫三",
+  "planet.epcore.ganymede_orbit": "木卫三轨道",
+  "planet.epcore.io": "木卫一",
+  "planet.epcore.io_orbit": "木卫一轨道"
 }
