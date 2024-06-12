@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.data.tag;
+package cn.dancingsnow.epcore.common.data;
 
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.common.data.GTMaterials;

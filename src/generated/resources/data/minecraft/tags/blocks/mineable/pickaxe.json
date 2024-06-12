@@ -1,0 +1,12 @@
+{
+  "values": [
+    "epcore:deimos_stone",
+    "epcore:deimos_surface",
+    "epcore:ceres_stone",
+    "epcore:ceres_surface",
+    "epcore:ganymede_stone",
+    "epcore:ganymede_surface",
+    "epcore:io_stone",
+    "epcore:io_surface"
+  ]
+}

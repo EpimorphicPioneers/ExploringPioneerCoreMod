@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.data;
+package cn.dancingsnow.epcore.common.data;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 
@@ -8,7 +8,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-public class EPModTags {
+public class EPCoreTags {
     public static class Items {
         private static TagKey<Item> mc(String path) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(path));
@@ -20,6 +20,8 @@ public class EPModTags {
     }
 
     public static class Blocks {
+
+        public static final TagKey<Block> ORE_REPLACEABLES = mod("ore_replaceables");
 
         private static TagKey<Block> mc(String path) {
             return TagKey.create(Registries.BLOCK, new ResourceLocation(path));

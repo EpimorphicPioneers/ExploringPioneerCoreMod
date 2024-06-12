@@ -1,0 +1,11 @@
+{
+  "type": "epcore:ganymede",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "epcore:ganymede",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "epcore:space_wastelands"
+    }
+  }
+}

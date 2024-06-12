@@ -1,0 +1,11 @@
+{
+  "type": "epcore:ganymede_orbit",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "epcore:orbit"
+    },
+    "settings": "epcore:orbit"
+  }
+}
