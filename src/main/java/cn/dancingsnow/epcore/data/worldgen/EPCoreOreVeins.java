@@ -325,7 +325,7 @@ public class EPCoreOreVeins {
                         .surfaceRock(GTMaterials.BasalticMineralSand)
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
-    public static GTOreDefinition MAGNETITE = create("magnetite", "Magnetite veins", "磁铁矿矿脉", vein -> {
+    public static GTOreDefinition MAGNETITE = create("magnetite", "Magnetite veins", "磁铁矿脉", vein -> {
         vein.weight(160);
         vein.clusterSize(40);
         vein.density(0.9F);
@@ -475,7 +475,7 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
 
-    public static GTOreDefinition QUARTZITE = create("quartzite", "Quartzite veins", "石英矿脉", vein -> {
+    public static GTOreDefinition QUARTZITE = create("quartzite", "Quartzite veins", "石英岩矿脉", vein -> {
         vein.weight(20);
         vein.clusterSize(40);
         vein.density(0.35F);
@@ -509,7 +509,7 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
 
-    public static GTOreDefinition ILMENITE = create("ilmenite", "Ilmenite veins", "钛铁矿矿脉", vein -> {
+    public static GTOreDefinition ILMENITE = create("ilmenite", "Ilmenite veins", "钛铁矿脉", vein -> {
         vein.weight(16);
         vein.clusterSize(35);
         vein.density(0.4F);
@@ -524,7 +524,7 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
 
-    public static GTOreDefinition BAUXITE = create("bauxite", "Bauxite veins", "铝土矿矿脉", vein -> {
+    public static GTOreDefinition BAUXITE = create("bauxite", "Bauxite veins", "铝土矿脉", vein -> {
         vein.weight(16);
         vein.clusterSize(35);
         vein.density(0.4F);
@@ -540,7 +540,7 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
 
-    public static GTOreDefinition GALENA = create("galena", "Galena veins", "方铅矿矿脉", vein -> {
+    public static GTOreDefinition GALENA = create("galena", "Galena veins", "方铅矿脉", vein -> {
         vein.weight(40);
         vein.clusterSize(40);
         vein.density(0.35F);
@@ -557,7 +557,7 @@ public class EPCoreOreVeins {
     });
 
     public static GTOreDefinition SULFUR_SMALL =
-            create("sulfur_small", "sulfur_small veins", "钻石矿脉", vein -> {
+            create("sulfur_small", "Sulfur veins", "硫矿脉", vein -> {
                 vein.weight(100);
                 vein.clusterSize(35);
                 vein.density(0.3F);
@@ -573,7 +573,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition MOLYBDENUM_SMALL =
-            create("molybdenum_small", "molybdenum_small veins", "钻石矿脉", vein -> {
+            create("molybdenum_small", "Molybdenum veins", "钼矿脉", vein -> {
                 vein.weight(10);
                 vein.clusterSize(30);
                 vein.density(0.5F);
@@ -590,7 +590,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition REDSTONE_SMALL =
-            create("redstone_small", "redstone_small veins", "钻石矿脉", vein -> {
+            create("redstone_small", "Redstone veins", "红石矿脉", vein -> {
                 vein.weight(60);
                 vein.clusterSize(30);
                 vein.density(0.25F);
@@ -606,7 +606,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition COPPER_SMALL =
-            create("copper_small", "copper_small veins", "钻石矿脉", vein -> {
+            create("copper_small", "Copper veins", "铜矿脉", vein -> {
                 vein.weight(80);
                 vein.clusterSize(50);
                 vein.density(1F);
@@ -629,7 +629,7 @@ public class EPCoreOreVeins {
                         .surfaceRock(GTMaterials.Chalcopyrite)
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
-    public static GTOreDefinition IRON_SMALL = create("iron_small", "iron_small veins", "钻石矿脉", vein -> {
+    public static GTOreDefinition IRON_SMALL = create("iron_small", "Iron veins", "铁矿脉", vein -> {
         vein.weight(120);
         vein.clusterSize(50);
         vein.density(1F);
@@ -653,7 +653,7 @@ public class EPCoreOreVeins {
                 .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
     });
     public static GTOreDefinition BERYLLIUM_SMALL =
-            create("beryllium_small", "beryllium_small veins", "钻石矿脉", vein -> {
+            create("beryllium_small", "Beryllium veins", "铍矿脉", vein -> {
                 vein.weight(30);
                 vein.clusterSize(20);
                 vein.density(0.4F);
@@ -669,7 +669,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition ELECTROTINE_SMALL =
-            create("electrotine_small", "electrotine_small veins", "钻石矿脉", vein -> {
+            create("electrotine_small", "Electrotine veins", "蓝石矿脉", vein -> {
                 vein.weight(40);
                 vein.clusterSize(35);
                 vein.density(0.3F);
@@ -686,7 +686,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition TETRAHEDRITE_SMALL =
-            create("tetrahedrite_small", "tetrahedrite_small veins", "钻石矿脉", vein -> {
+            create("tetrahedrite_small", "Tetrahedrite veins", "黝铜矿脉", vein -> {
                 vein.weight(80);
                 vein.clusterSize(50);
                 vein.density(1F);
@@ -709,7 +709,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition NETHER_QUARTZ_SMALL =
-            create("nether_quartz_small", "nether_quartz_small veins", "钻石矿脉", vein -> {
+            create("nether_quartz_small", "Nether Quartz veins", "下界石英矿脉", vein -> {
                 vein.weight(40);
                 vein.clusterSize(35);
                 vein.density(0.3F);
@@ -724,7 +724,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition QUARTZITE_SMALL =
-            create("quartzite_small", "quartzite_small veins", "钻石矿脉", vein -> {
+            create("quartzite_small", "Quartzite veins", "石英岩矿脉", vein -> {
                 vein.weight(40);
                 vein.clusterSize(35);
                 vein.density(0.3F);
@@ -740,7 +740,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
     public static GTOreDefinition MANGANESE_SMALL =
-            create("manganese_small", "manganese_small veins", "钻石矿脉", vein -> {
+            create("manganese_small", "Manganese veins", "锰矿脉", vein -> {
                 vein.weight(20);
                 vein.clusterSize(40);
                 vein.density(0.8F);
@@ -757,7 +757,7 @@ public class EPCoreOreVeins {
                         .placement(SurfaceIndicatorGenerator.IndicatorPlacement.ABOVE));
             });
 
-    public static GTOreDefinition GOLD_SMALL = create("gold_small", "gold_small veins", "钻石矿脉", vein -> {
+    public static GTOreDefinition GOLD_SMALL = create("gold_small", "Gold veins", "金矿脉", vein -> {
         vein.weight(160);
         vein.clusterSize(40);
         vein.density(0.9F);
@@ -781,7 +781,7 @@ public class EPCoreOreVeins {
     });
 
     public static GTOreDefinition MAGNETITE_SMALL =
-            create("magnetite_small", "magnetite_small veins", "钻石矿脉", vein -> {
+            create("magnetite_small", "Magnetite veins", "磁铁矿脉", vein -> {
                 vein.weight(160);
                 vein.clusterSize(40);
                 vein.density(0.9F);
@@ -805,7 +805,7 @@ public class EPCoreOreVeins {
             });
 
     public static GTOreDefinition CASSITERITE_SMALL =
-            create("cassiterite_small", "cassiterite_small veins", "钻石矿脉", vein -> {
+            create("cassiterite_small", "Cassiterite veins", "锡石矿脉", vein -> {
                 vein.weight(50);
                 vein.clusterSize(30);
                 vein.density(0.4F);
@@ -821,7 +821,7 @@ public class EPCoreOreVeins {
             });
 
     public static GTOreDefinition OLIVINE_SMALL =
-            create("olivine_small", "olivine_small veins", "钻石矿脉", vein -> {
+            create("olivine_small", "Olivine veins", "橄榄石矿脉", vein -> {
                 vein.weight(60);
                 vein.clusterSize(45);
                 vein.density(0.45F);
@@ -839,7 +839,7 @@ public class EPCoreOreVeins {
             });
 
     public static GTOreDefinition NICKEL_SMALL =
-            create("nickel_small", "nickel_small veins", "钻石矿脉", vein -> {
+            create("nickel_small", "Nickel veins", "镍矿脉", vein -> {
                 vein.weight(40);
                 vein.clusterSize(40);
                 vein.density(0.35F);
@@ -857,7 +857,7 @@ public class EPCoreOreVeins {
             });
 
     public static GTOreDefinition LAPIS_SMALL =
-            create("lapis_small", "lapis_small veins", "钻石矿脉", vein -> {
+            create("lapis_small", "Lapis veins", "青金石矿脉", vein -> {
                 vein.weight(50);
                 vein.clusterSize(45);
                 vein.density(0.25F);
@@ -877,7 +877,7 @@ public class EPCoreOreVeins {
             });
 
     public static GTOreDefinition SCHEELITE_SMALL =
-            create("scheelite_small", "scheelite_small veins", "钻石矿脉", vein -> {
+            create("scheelite_small", "Scheelite veins", "白钨矿脉", vein -> {
                 vein.weight(40);
                 vein.clusterSize(40);
                 vein.density(0.35F);
