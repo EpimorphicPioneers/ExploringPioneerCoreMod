@@ -59,10 +59,9 @@ dependencies {
         modRuntimeOnly(forge.shimmer.forge) { transitive = false } // Shimmer
         modRuntimeOnly("maven.modrinth:embeddium:0.2.10+mc1.20.1") // Embeddium
         modRuntimeOnly("maven.modrinth:oculus:1.20.1-1.6.9") // Oculus
+        modRuntimeOnly("curse.maven:world-stripper-250603:4578579") // WorldStripper
     }
 
     forgeRuntimeLibrary("com.teamresourceful:yabn:1.0.3")
     forgeRuntimeLibrary("com.teamresourceful:bytecodecs:1.0.2")
-
-    modRuntimeOnly("curse.maven:world-stripper-250603:4578579")
 }
