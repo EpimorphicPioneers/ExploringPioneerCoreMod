@@ -18,30 +18,24 @@ import lombok.experimental.Accessors;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+@Setter
 @Accessors(fluent = true, chain = true)
 public class OreTagPrefixBuilder extends BuilderBase<TagPrefix> {
-    public final TagPrefix base;
+    private final TagPrefix base;
 
-    @Setter
-    public Supplier<BlockState> stateSupplier;
+    private Supplier<BlockState> stateSupplier;
 
-    @Setter
-    public Supplier<Material> materialSupplier;
+    private Supplier<Material> materialSupplier;
 
-    @Setter
-    public ResourceLocation baseModelLocation;
+    private ResourceLocation baseModelLocation;
 
-    @Setter
-    public Supplier<BlockBehaviour.Properties> templateProperties;
+    private Supplier<BlockBehaviour.Properties> templateProperties;
 
-    @Setter
-    public boolean doubleDrops;
+    private boolean doubleDrops;
 
-    @Setter
-    public boolean isSand;
+    private boolean isSand;
 
-    @Setter
-    public boolean shouldDropAsItem;
+    private boolean shouldDropAsItem;
 
     protected OreTagPrefixBuilder(ResourceLocation id, TagKey<Block> miningToolTag, Object... args) {
         super(id, args);
