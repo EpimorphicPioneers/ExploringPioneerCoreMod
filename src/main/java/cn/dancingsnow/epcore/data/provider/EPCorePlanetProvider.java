@@ -2,6 +2,7 @@ package cn.dancingsnow.epcore.data.provider;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.api.registry.PlanetBuilder;
 
 import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
@@ -11,10 +12,7 @@ import net.minecraft.world.level.Level;
 
 import earth.terrarium.adastra.AdAstra;
 import earth.terrarium.adastra.api.planets.Planet;
-import earth.terrarium.adastra.common.constants.PlanetConstants;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class EPCorePlanetProvider extends CodecProvider<Planet> {
@@ -30,82 +28,53 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
 
     @Override
     protected void build(BiConsumer<ResourceLocation, Planet> consumer) {
-        orbit(consumer, EPCorePlanets.DEIMOS_ORBIT, 24, SOLAR_SYSTEM, 2);
-        orbit(consumer, EPCorePlanets.CERES_ORBIT, 24, SOLAR_SYSTEM, 3);
-        orbit(consumer, EPCorePlanets.GANYMEDE_ORBIT, 24, SOLAR_SYSTEM, 3);
-        orbit(consumer, EPCorePlanets.IO_ORBIT, 24, SOLAR_SYSTEM, 4);
+        planet(EPCorePlanets.DEIMOS)
+                .tier(2)
+                .temperature(-75)
+                .gravity(3.72076f)
+                .solarPower(12)
+                .solarSystem(SOLAR_SYSTEM)
+                .orbit(
+                        EPCorePlanets.DEIMOS_ORBIT,
+                        builder -> builder.tier(2).solarPower(24).galaxy(SOLAR_SYSTEM).build())
+                .buildAndRegister(consumer);
 
-        consumer.accept(
-                EPCorePlanets.DEIMOS.location(),
-                new Planet(
-                        EPCorePlanets.DEIMOS,
-                        false,
-                        (short) -75,
-                        3.72076f,
-                        12,
-                        SOLAR_SYSTEM,
-                        Optional.of(EPCorePlanets.DEIMOS_ORBIT),
-                        2,
-                        List.of()));
+        planet(EPCorePlanets.CERES)
+                .tier(3)
+                .temperature(-105)
+                .gravity(2.7558f)
+                .solarPower(8)
+                .solarSystem(SOLAR_SYSTEM)
+                .orbit(
+                        EPCorePlanets.CERES_ORBIT,
+                        builder -> builder.tier(3).solarPower(24).galaxy(SOLAR_SYSTEM).build())
+                .buildAndRegister(consumer);
 
-        consumer.accept(
-                EPCorePlanets.CERES.location(),
-                new Planet(
-                        EPCorePlanets.CERES,
-                        false,
-                        (short) -105,
-                        2.7558f,
-                        8,
-                        SOLAR_SYSTEM,
-                        Optional.of(EPCorePlanets.CERES_ORBIT),
-                        3,
-                        List.of()));
+        planet(EPCorePlanets.GANYMEDE)
+                .tier(3)
+                .temperature(-105)
+                .gravity(14.281004f)
+                .solarPower(8)
+                .solarSystem(SOLAR_SYSTEM)
+                .orbit(
+                        EPCorePlanets.GANYMEDE_ORBIT,
+                        builder -> builder.tier(3).solarPower(24).galaxy(SOLAR_SYSTEM).build())
+                .buildAndRegister(consumer);
 
-        consumer.accept(
-                EPCorePlanets.GANYMEDE.location(),
-                new Planet(
-                        EPCorePlanets.GANYMEDE,
-                        false,
-                        (short) -105,
-                        14.281004f,
-                        8,
-                        SOLAR_SYSTEM,
-                        Optional.of(EPCorePlanets.GANYMEDE_ORBIT),
-                        3,
-                        List.of()));
-
-        consumer.accept(
-                EPCorePlanets.IO.location(),
-                new Planet(
-                        EPCorePlanets.IO,
-                        false,
-                        (short) -125,
-                        17.9641009f,
-                        4,
-                        SOLAR_SYSTEM,
-                        Optional.of(EPCorePlanets.IO_ORBIT),
-                        4,
-                        List.of()));
+        planet(EPCorePlanets.IO)
+                .tier(4)
+                .temperature(-125)
+                .gravity(17.9641009f)
+                .solarPower(4)
+                .solarSystem(SOLAR_SYSTEM)
+                .orbit(
+                        EPCorePlanets.IO_ORBIT,
+                        builder -> builder.tier(4).solarPower(24).galaxy(SOLAR_SYSTEM).build())
+                .buildAndRegister(consumer);
     }
 
-    private static void orbit(
-            BiConsumer<ResourceLocation, Planet> consumer,
-            ResourceKey<Level> planet,
-            int solarPower,
-            ResourceLocation galaxy,
-            int tier) {
-        consumer.accept(
-                planet.location(),
-                new Planet(
-                        planet,
-                        false,
-                        PlanetConstants.SPACE_TEMPERATURE,
-                        PlanetConstants.SPACE_GRAVITY,
-                        solarPower,
-                        galaxy,
-                        Optional.empty(),
-                        tier,
-                        List.of()));
+    private static PlanetBuilder planet(ResourceKey<Level> dimension) {
+        return PlanetBuilder.create(dimension.location()).dimension(dimension);
     }
 
     @Override
