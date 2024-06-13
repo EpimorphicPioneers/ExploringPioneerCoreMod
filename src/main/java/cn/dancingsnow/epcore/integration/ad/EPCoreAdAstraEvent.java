@@ -1,9 +1,12 @@
 package cn.dancingsnow.epcore.integration.ad;
 
 import cn.dancingsnow.epcore.api.item.armor.IOxygenArmor;
+
 import com.gregtechceu.gtceu.api.item.armor.ArmorComponentItem;
-import earth.terrarium.adastra.api.events.AdAstraEvents;
+
 import net.minecraft.world.item.ItemStack;
+
+import earth.terrarium.adastra.api.events.AdAstraEvents;
 
 public class EPCoreAdAstraEvent {
     public static void init() {
