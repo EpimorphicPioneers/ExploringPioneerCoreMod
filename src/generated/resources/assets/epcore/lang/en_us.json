@@ -61,6 +61,9 @@
   "gtceu.jei.ore_vein.vermiculite": "Vermiculite veins",
   "gtceu.jei.ore_vein.zeolite": "Zeolite veins",
   "itemGroup.epcore.core": "ExploringPioneerCoreMod",
+  "material.gtceu.lignite": "Lignite Coal",
+  "material.gtceu.steel_leaf": "Steel Leaf",
+  "material.gtceu.vermiculite": "Vermiculite",
   "planet.epcore.ceres": "Ceres",
   "planet.epcore.ceres_orbit": "Ceres Orbit",
   "planet.epcore.deimos": "Deimos",
@@ -68,5 +71,14 @@
   "planet.epcore.ganymede": "Ganymede",
   "planet.epcore.ganymede_orbit": "Ganymede Orbit",
   "planet.epcore.io": "IO",
-  "planet.epcore.io_orbit": "IO Orbit"
+  "planet.epcore.io_orbit": "IO Orbit",
+  "tagprefix.ceres_stone": "Ceres Stone %s Ore",
+  "tagprefix.deimos_stone": "Deimos Stone %s Ore",
+  "tagprefix.ganymede_stone": "Ganymede Stone %s Ore",
+  "tagprefix.glacio_stone": "Glacio Stone %s Ore",
+  "tagprefix.io_stone": "Io Stone %s Ore",
+  "tagprefix.mars_stone": "Mars Stone %s Ore",
+  "tagprefix.mercury_stone": "Mercury Stone %s Ore",
+  "tagprefix.moon_stone": "Moon Stone %s Ore",
+  "tagprefix.venus_stone": "Venus Stone %s Ore"
 }

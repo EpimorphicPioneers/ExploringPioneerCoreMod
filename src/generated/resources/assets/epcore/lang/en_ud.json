@@ -61,6 +61,9 @@
   "gtceu.jei.ore_vein.vermiculite": "suıǝʌ ǝʇıןnɔıɯɹǝΛ",
   "gtceu.jei.ore_vein.zeolite": "suıǝʌ ǝʇıןoǝZ",
   "itemGroup.epcore.core": "poWǝɹoƆɹǝǝuoıԀbuıɹoןdxƎ",
+  "material.gtceu.lignite": "ןɐoƆ ǝʇıubıꞀ",
+  "material.gtceu.steel_leaf": "ɟɐǝꞀ ןǝǝʇS",
+  "material.gtceu.vermiculite": "ǝʇıןnɔıɯɹǝΛ",
   "planet.epcore.ceres": "sǝɹǝƆ",
   "planet.epcore.ceres_orbit": "ʇıqɹO sǝɹǝƆ",
   "planet.epcore.deimos": "soɯıǝᗡ",
@@ -68,5 +71,14 @@
   "planet.epcore.ganymede": "ǝpǝɯʎuɐ⅁",
   "planet.epcore.ganymede_orbit": "ʇıqɹO ǝpǝɯʎuɐ⅁",
   "planet.epcore.io": "OI",
-  "planet.epcore.io_orbit": "ʇıqɹO OI"
+  "planet.epcore.io_orbit": "ʇıqɹO OI",
+  "tagprefix.ceres_stone": "ǝɹO %s ǝuoʇS sǝɹǝƆ",
+  "tagprefix.deimos_stone": "ǝɹO %s ǝuoʇS soɯıǝᗡ",
+  "tagprefix.ganymede_stone": "ǝɹO %s ǝuoʇS ǝpǝɯʎuɐ⅁",
+  "tagprefix.glacio_stone": "ǝɹO %s ǝuoʇS oıɔɐן⅁",
+  "tagprefix.io_stone": "ǝɹO %s ǝuoʇS oI",
+  "tagprefix.mars_stone": "ǝɹO %s ǝuoʇS sɹɐW",
+  "tagprefix.mercury_stone": "ǝɹO %s ǝuoʇS ʎɹnɔɹǝW",
+  "tagprefix.moon_stone": "ǝɹO %s ǝuoʇS uooW",
+  "tagprefix.venus_stone": "ǝɹO %s ǝuoʇS snuǝΛ"
 }

@@ -60,6 +60,9 @@
   "gtceu.jei.ore_vein.tetrahedrite_small": "黝铜矿脉",
   "gtceu.jei.ore_vein.vermiculite": "蛭石矿脉",
   "gtceu.jei.ore_vein.zeolite": "沸石矿脉",
+  "material.gtceu.lignite": "褐煤",
+  "material.gtceu.steel_leaf": "钢叶",
+  "material.gtceu.vermiculite": "蛭石",
   "planet.epcore.ceres": "谷神星",
   "planet.epcore.ceres_orbit": "谷神星轨道",
   "planet.epcore.deimos": "火卫二",
@@ -67,5 +70,14 @@
   "planet.epcore.ganymede": "木卫三",
   "planet.epcore.ganymede_orbit": "木卫三轨道",
   "planet.epcore.io": "木卫一",
-  "planet.epcore.io_orbit": "木卫一轨道"
+  "planet.epcore.io_orbit": "木卫一轨道",
+  "tagprefix.ceres_stone": "谷神星%s矿石",
+  "tagprefix.deimos_stone": "火卫二%s矿石",
+  "tagprefix.ganymede_stone": "木卫三%s矿石",
+  "tagprefix.glacio_stone": "霜原石%s矿石",
+  "tagprefix.io_stone": "木卫一%s矿石",
+  "tagprefix.mars_stone": "火星石%s矿石",
+  "tagprefix.mercury_stone": "水星石%s矿石",
+  "tagprefix.moon_stone": "月石%s矿石",
+  "tagprefix.venus_stone": "金星石%s矿石"
 }

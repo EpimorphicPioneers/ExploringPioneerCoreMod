@@ -63,5 +63,6 @@ dependencies {
 
     forgeRuntimeLibrary("com.teamresourceful:yabn:1.0.3")
     forgeRuntimeLibrary("com.teamresourceful:bytecodecs:1.0.2")
-    //modRuntimeOnly(forge.worldStripper)
+
+    modRuntimeOnly("curse.maven:world-stripper-250603:4578579")
 }
