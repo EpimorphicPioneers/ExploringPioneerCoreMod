@@ -24,7 +24,6 @@ public class EPCoreBlocks {
             .block("deimos_stone", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, EPCoreTags.Blocks.ORE_REPLACEABLES)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -32,7 +31,6 @@ public class EPCoreBlocks {
             .block("deimos_surface", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -44,7 +42,6 @@ public class EPCoreBlocks {
             .block("ceres_stone", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, EPCoreTags.Blocks.ORE_REPLACEABLES)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -52,7 +49,6 @@ public class EPCoreBlocks {
             .block("ceres_surface", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -64,7 +60,6 @@ public class EPCoreBlocks {
             .block("ganymede_stone", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, EPCoreTags.Blocks.ORE_REPLACEABLES)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -72,7 +67,6 @@ public class EPCoreBlocks {
             .block("ganymede_surface", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -84,7 +78,6 @@ public class EPCoreBlocks {
             .block("io_stone", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE, EPCoreTags.Blocks.ORE_REPLACEABLES)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -92,7 +85,6 @@ public class EPCoreBlocks {
             .block("io_surface", Block::new)
             .initialProperties(() -> Blocks.STONE)
             .tag(BlockTags.MINEABLE_WITH_PICKAXE)
-            .defaultLoot()
             .simpleItem()
             .register();
 
@@ -100,7 +92,6 @@ public class EPCoreBlocks {
             .block("io_ash", FallingBlock::new)
             .initialProperties(() -> Blocks.SAND)
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
-            .defaultLoot()
             .simpleItem()
             .register();
 

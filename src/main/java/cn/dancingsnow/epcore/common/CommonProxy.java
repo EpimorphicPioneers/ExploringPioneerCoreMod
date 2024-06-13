@@ -4,6 +4,7 @@ import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.common.data.EPCoreBlocks;
 import cn.dancingsnow.epcore.common.data.EPCoreCreativeModeTabs;
 import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
+import cn.dancingsnow.epcore.common.data.EPCoreTagPrefixes;
 import cn.dancingsnow.epcore.common.data.worldgen.EPCoreOreVeins;
 import cn.dancingsnow.epcore.common.data.worldgen.EPCoreWorldGenLayers;
 import cn.dancingsnow.epcore.common.worldgen.EPCoreRuleTests;
@@ -33,6 +34,11 @@ public class CommonProxy implements ICommonProxyBase {
     @Override
     public void registerWorldgenLayers() {
         EPCoreWorldGenLayers.init();
+    }
+
+    @Override
+    public void registerTagPrefixes() {
+        EPCoreTagPrefixes.init();
     }
 
     @Override

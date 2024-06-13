@@ -2,6 +2,7 @@
   "required": true,
   "package": "cn.dancingsnow.epcore.mixins",
   "compatibilityLevel": "JAVA_17",
+  "plugin": "cn.dancingsnow.epcore.mixins.EPCoreMixinPlugin",
   "minVersion": "0.8",
   "client": [],
   "mixins": [],

@@ -63,10 +63,16 @@ description='''${mod_description}'''
     ordering="NONE"
     side="BOTH"
 [[dependencies.${mod_id}]]
+    modId="gtceu"
+    mandatory=true
+    versionRange="[1.0.0,)"
+    ordering="BEFORE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
     modId="monomorphism"
     mandatory=true
     versionRange="[1.0.0,)"
-    ordering="AFTER"
+    ordering="BEFORE"
     side="BOTH"
 [[dependencies.${mod_id}]]
     modId="ad_astra"
