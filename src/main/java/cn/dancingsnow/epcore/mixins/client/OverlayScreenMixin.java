@@ -1,18 +1,21 @@
 package cn.dancingsnow.epcore.mixins.client;
 
 import cn.dancingsnow.epcore.api.item.armor.IOxygenArmor;
+
 import com.gregtechceu.gtceu.api.item.armor.ArmorComponentItem;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.Font;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.player.LocalPlayer;
+import net.minecraft.world.item.ItemStack;
+
 import com.mojang.blaze3d.vertex.PoseStack;
 import earth.terrarium.adastra.api.systems.PlanetData;
 import earth.terrarium.adastra.client.config.AdAstraConfigClient;
 import earth.terrarium.adastra.client.screens.player.OverlayScreen;
 import earth.terrarium.adastra.client.utils.ClientData;
 import earth.terrarium.adastra.common.items.armor.SpaceSuitItem;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -24,10 +27,7 @@ import static earth.terrarium.adastra.client.screens.player.OverlayScreen.OXYGEN
 @Mixin(value = OverlayScreen.class, remap = false)
 public class OverlayScreenMixin {
 
-    @Inject(
-            method = "render",
-            at = @At("RETURN")
-    )
+    @Inject(method = "render", at = @At("RETURN"))
     private static void onRender(GuiGraphics graphics, float partialTick, CallbackInfo ci) {
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer player = mc.player;
@@ -39,7 +39,9 @@ public class OverlayScreenMixin {
 
         // Oxygen overlay
         ItemStack chestStack = player.getInventory().getArmor(2);
-        if (SpaceSuitItem.hasFullSet(player) && chestStack.getItem() instanceof ArmorComponentItem armorComponentItem && armorComponentItem.getArmorLogic() instanceof IOxygenArmor oxygenArmor) {
+        if (SpaceSuitItem.hasFullSet(player)
+                && chestStack.getItem() instanceof ArmorComponentItem armorComponentItem
+                && armorComponentItem.getArmorLogic() instanceof IOxygenArmor oxygenArmor) {
             long amount = oxygenArmor.getOxygen(chestStack);
             long capacity = oxygenArmor.getMaxOxygen();
             double ratio = (double) amount / capacity;
