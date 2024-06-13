@@ -5,6 +5,8 @@ import cn.dancingsnow.epcore.common.CommonProxy;
 import cn.dancingsnow.epcore.config.EPCoreConfigHolder;
 import cn.dancingsnow.epcore.data.lang.EPCoreLangHandler;
 
+import cn.dancingsnow.epcore.data.tag.EPCoreTagHandler;
+import cn.dancingsnow.epcore.integration.ad.EPCoreAdAstraEvent;
 import com.epimorphismmc.monomorphism.MOMod;
 import com.epimorphismmc.monomorphism.datagen.MOProviderTypes;
 import com.epimorphismmc.monomorphism.registry.registrate.MORegistrate;
@@ -13,6 +15,7 @@ import com.gregtechceu.gtceu.utils.FormattingUtil;
 
 import com.lowdragmc.lowdraglib.networking.INetworking;
 
+import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -47,6 +50,7 @@ public class EPCoreMod extends MOMod<CommonProxy> {
     protected void onModConstructed() {
         instance = this;
         EPCoreConfigHolder.init();
+        EPCoreAdAstraEvent.init();
     }
 
     @Override
@@ -64,6 +68,7 @@ public class EPCoreMod extends MOMod<CommonProxy> {
     @Override
     public void addDataGenerator(MORegistrate registrate) {
         registrate.addDataGenerator(MOProviderTypes.MO_LANG, EPCoreLangHandler::init);
+        registrate.addDataGenerator(ProviderType.ITEM_TAGS, EPCoreTagHandler::init);
     }
 
     public static ResourceLocation id(String path) {

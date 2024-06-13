@@ -10,6 +10,9 @@ import net.minecraft.world.level.block.Block;
 
 public class EPCoreTags {
     public static class Items {
+        public static final TagKey<Item> NANO_SPACE_SUITE = mod("nano_space_suite");
+        public static final TagKey<Item> QUANTUM_SPACE_SUITE = mod("quantum_space_suite");
+
         private static TagKey<Item> mc(String path) {
             return TagKey.create(Registries.ITEM, new ResourceLocation(path));
         }
