@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.function.BiConsumer;
-import java.util.function.Function;
+import java.util.function.Consumer;
 
 @Setter
 @Accessors(fluent = true, chain = true)
@@ -42,10 +42,11 @@ public class PlanetBuilder extends BuilderBase<Planet> {
         return new PlanetBuilder(id);
     }
 
-    public PlanetBuilder orbit(
-            ResourceKey<Level> dimension, Function<OrbitBuilder, Planet> orbitGenerator) {
-        this.orbitDimension = dimension;
-        this.orbit = orbitGenerator.apply(new OrbitBuilder(dimension));
+    public PlanetBuilder orbit(Consumer<OrbitBuilder> consumer) {
+        var builder = new OrbitBuilder();
+        consumer.accept(builder);
+        this.orbit = builder.build();
+        this.orbitDimension = orbit.dimension();
         return this;
     }
 
@@ -78,18 +79,16 @@ public class PlanetBuilder extends BuilderBase<Planet> {
     @Setter
     @Accessors(fluent = true, chain = true)
     public static class OrbitBuilder {
-        private final ResourceKey<Level> dimension;
+        private ResourceKey<Level> dimension;
         private int solarPower;
         private ResourceLocation galaxy;
         private int tier;
 
-        protected OrbitBuilder(ResourceKey<Level> dimension) {
-            this.dimension = dimension;
-        }
+        protected OrbitBuilder() {}
 
-        public Planet build() {
+        protected Planet build() {
             return new Planet(
-                    dimension,
+                    Objects.requireNonNull(dimension, "Dimension is not set."),
                     false,
                     PlanetConstants.SPACE_TEMPERATURE,
                     PlanetConstants.SPACE_GRAVITY,
