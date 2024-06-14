@@ -3,8 +3,8 @@ package cn.dancingsnow.epcore.data.planet;
 import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
 import cn.dancingsnow.epcore.api.registry.PlanetBuilder;
-
 import cn.dancingsnow.epcore.data.provider.CodecProvider;
+
 import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -35,11 +35,7 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
                 .gravity(3.72076f)
                 .solarPower(12)
                 .solarSystem(SOLAR_SYSTEM)
-                .orbit(builder -> builder
-                        .dimension(EPCorePlanets.DEIMOS_ORBIT)
-                        .tier(2)
-                        .solarPower(24)
-                        .galaxy(SOLAR_SYSTEM))
+                .orbit(builder -> builder.dimension(EPCorePlanets.DEIMOS_ORBIT).tier(2).solarPower(24))
                 .buildAndRegister(consumer);
 
         planet(EPCorePlanets.CERES)
@@ -48,11 +44,7 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
                 .gravity(2.7558f)
                 .solarPower(8)
                 .solarSystem(SOLAR_SYSTEM)
-                .orbit(builder -> builder
-                        .dimension(EPCorePlanets.CERES_ORBIT)
-                        .tier(3)
-                        .solarPower(24)
-                        .galaxy(SOLAR_SYSTEM))
+                .orbit(builder -> builder.dimension(EPCorePlanets.CERES_ORBIT).tier(3).solarPower(24))
                 .buildAndRegister(consumer);
 
         planet(EPCorePlanets.GANYMEDE)
@@ -61,11 +53,8 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
                 .gravity(14.281004f)
                 .solarPower(8)
                 .solarSystem(SOLAR_SYSTEM)
-                .orbit(builder -> builder
-                        .dimension(EPCorePlanets.GANYMEDE_ORBIT)
-                        .tier(3)
-                        .solarPower(24)
-                        .galaxy(SOLAR_SYSTEM))
+                .orbit(
+                        builder -> builder.dimension(EPCorePlanets.GANYMEDE_ORBIT).tier(3).solarPower(24))
                 .buildAndRegister(consumer);
 
         planet(EPCorePlanets.IO)
@@ -74,8 +63,7 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
                 .gravity(17.9641009f)
                 .solarPower(4)
                 .solarSystem(SOLAR_SYSTEM)
-                .orbit(builder ->
-                        builder.dimension(EPCorePlanets.IO_ORBIT).tier(4).solarPower(24).galaxy(SOLAR_SYSTEM))
+                .orbit(builder -> builder.dimension(EPCorePlanets.IO_ORBIT).tier(4).solarPower(24))
                 .buildAndRegister(consumer);
     }
 
