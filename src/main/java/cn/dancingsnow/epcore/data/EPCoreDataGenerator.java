@@ -1,8 +1,8 @@
 package cn.dancingsnow.epcore.data;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.data.provider.EPCorePlanetProvider;
-import cn.dancingsnow.epcore.data.provider.EPCorePlanetRendererProvider;
+import cn.dancingsnow.epcore.data.planet.EPCorePlanetProvider;
+import cn.dancingsnow.epcore.data.planet.EPCorePlanetRendererProvider;
 import cn.dancingsnow.epcore.data.provider.EPCoreRegistryProvider;
 
 import net.minecraft.core.HolderLookup;

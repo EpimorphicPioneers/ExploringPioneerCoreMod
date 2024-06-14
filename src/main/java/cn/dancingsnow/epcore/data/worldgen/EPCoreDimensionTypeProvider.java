@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.data.provider.worldgen;
+package cn.dancingsnow.epcore.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
