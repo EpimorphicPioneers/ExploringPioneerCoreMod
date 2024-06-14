@@ -1,8 +1,8 @@
 package cn.dancingsnow.epcore.common.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gtceu.api.data.worldgen.generator.indicators.SurfaceIndicatorGenerator;

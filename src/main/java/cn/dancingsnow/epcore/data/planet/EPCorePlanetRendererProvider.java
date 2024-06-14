@@ -1,6 +1,7 @@
 package cn.dancingsnow.epcore.data.planet;
 
 import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.api.registry.PlanetRendererBuilder;
 import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.data.provider.CodecProvider;
 import cn.dancingsnow.epcore.utils.EPCoreDimensionRenderingUtils;
@@ -11,17 +12,10 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.phys.Vec3;
 
-import earth.terrarium.adastra.client.dimension.MovementType;
 import earth.terrarium.adastra.client.dimension.PlanetRenderer;
-import earth.terrarium.adastra.client.dimension.SkyRenderable;
-import earth.terrarium.adastra.client.utils.DimensionRenderingUtils;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import java.util.function.BiConsumer;
 
 public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> {
@@ -51,44 +45,13 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
 
     @Override
     protected void build(BiConsumer<ResourceLocation, PlanetRenderer> consumer) {
-        orbit(
-                consumer, EPCorePlanets.DEIMOS_ORBIT, EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8);
+        planetRenderer(EPCorePlanets.DEIMOS_ORBIT)
+                .orbit(EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8)
+                .buildAndRegister(consumer);
     }
 
-    private static void orbit(
-            BiConsumer<ResourceLocation, PlanetRenderer> consumer,
-            ResourceKey<Level> planet,
-            ResourceLocation planetTexture,
-            int backlightColor,
-            int sunScale,
-            SkyRenderable... additionalRenderables) {
-        List<SkyRenderable> renderables = new ArrayList<>();
-        renderables.add(new SkyRenderable(
-                DimensionRenderingUtils.SUN,
-                sunScale,
-                Vec3.ZERO,
-                Vec3.ZERO,
-                MovementType.TIME_OF_DAY,
-                0xffffffd9));
-        renderables.add(new SkyRenderable(
-                planetTexture, 80, new Vec3(180, 0, 0), Vec3.ZERO, MovementType.STATIC, backlightColor));
-        renderables.addAll(List.of(additionalRenderables));
-        consumer.accept(
-                planet.location(),
-                new PlanetRenderer(
-                        planet,
-                        true,
-                        true,
-                        false,
-                        false,
-                        false,
-                        DEFAULT_SUNRISE_COLOR,
-                        13000,
-                        Optional.of(0.6f),
-                        0,
-                        true,
-                        COLORED_STARS,
-                        renderables));
+    private static PlanetRendererBuilder planetRenderer(ResourceKey<Level> dimension) {
+        return PlanetRendererBuilder.create(dimension.location()).dimension(dimension);
     }
 
     @Override
