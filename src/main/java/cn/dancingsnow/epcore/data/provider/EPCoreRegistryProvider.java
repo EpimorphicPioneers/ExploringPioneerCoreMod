@@ -1,10 +1,10 @@
 package cn.dancingsnow.epcore.data.provider;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.data.provider.worldgen.EPCoreBiomeDataProvider;
-import cn.dancingsnow.epcore.data.provider.worldgen.EPCoreDimensionProvider;
-import cn.dancingsnow.epcore.data.provider.worldgen.EPCoreDimensionTypeProvider;
-import cn.dancingsnow.epcore.data.provider.worldgen.EPCoreNoiseGeneratorSettingsProvider;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreBiomeDataProvider;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionProvider;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionTypeProvider;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreNoiseGeneratorSettingsProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;

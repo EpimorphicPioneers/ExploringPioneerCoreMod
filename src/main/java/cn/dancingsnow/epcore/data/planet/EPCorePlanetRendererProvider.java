@@ -1,7 +1,8 @@
-package cn.dancingsnow.epcore.data.provider;
+package cn.dancingsnow.epcore.data.planet;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.data.provider.CodecProvider;
 import cn.dancingsnow.epcore.utils.EPCoreDimensionRenderingUtils;
 
 import net.minecraft.core.Registry;
