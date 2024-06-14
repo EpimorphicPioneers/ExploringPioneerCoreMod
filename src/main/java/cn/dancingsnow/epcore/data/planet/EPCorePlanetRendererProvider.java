@@ -51,7 +51,7 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
     }
 
     private static PlanetRendererBuilder planetRenderer(ResourceKey<Level> dimension) {
-        return PlanetRendererBuilder.create(dimension.location()).dimension(dimension);
+        return PlanetRendererBuilder.of(dimension.location()).dimension(dimension);
     }
 
     @Override

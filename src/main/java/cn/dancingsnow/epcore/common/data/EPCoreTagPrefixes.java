@@ -85,7 +85,7 @@ public class EPCoreTagPrefixes {
 
     private static OreTagPrefixBuilder oreTagPrefix(String name, String en_lang, String cn_lang) {
         ALL_TAG_PREFIXES.add(new TagPrefixTranslate(name, en_lang, cn_lang));
-        return OreTagPrefixBuilder.create(name, BlockTags.MINEABLE_WITH_PICKAXE);
+        return OreTagPrefixBuilder.of(name, BlockTags.MINEABLE_WITH_PICKAXE);
     }
 
     public record TagPrefixTranslate(String name, String en_lang, String cn_lang) {

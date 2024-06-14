@@ -46,7 +46,7 @@ public class PlanetRendererBuilder extends RegisterBuilder<PlanetRenderer> {
         super(id, args);
     }
 
-    public static PlanetRendererBuilder create(ResourceLocation id) {
+    public static PlanetRendererBuilder of(ResourceLocation id) {
         return new PlanetRendererBuilder(id);
     }
 
