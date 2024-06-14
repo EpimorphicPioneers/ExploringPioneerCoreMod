@@ -1,7 +1,5 @@
 package cn.dancingsnow.epcore.api.registry;
 
-import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
-
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
@@ -21,7 +19,7 @@ import java.util.function.Consumer;
 
 @Setter
 @Accessors(fluent = true, chain = true)
-public class PlanetBuilder extends BuilderBase<Planet> {
+public class PlanetBuilder extends RegisterBuilder<Planet> {
 
     private ResourceKey<Level> dimension;
     private boolean oxygen;
@@ -69,10 +67,11 @@ public class PlanetBuilder extends BuilderBase<Planet> {
                 Objects.requireNonNullElseGet(additionalLaunchDimensions, Collections::emptyList));
     }
 
-    public void buildAndRegister(BiConsumer<ResourceLocation, Planet> consumer) {
-        consumer.accept(id, register());
+    @Override
+    public void buildAndRegister(BiConsumer<ResourceLocation, Planet> registrar) {
+        super.buildAndRegister(registrar);
         if (orbit != null) {
-            consumer.accept(orbitDimension.location(), orbit);
+            registrar.accept(orbitDimension.location(), orbit);
         }
     }
 
