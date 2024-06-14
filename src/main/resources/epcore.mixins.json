@@ -5,14 +5,10 @@
     "plugin": "cn.dancingsnow.epcore.mixins.EPCoreMixinPlugin",
     "minVersion": "0.8",
     "client": [
-        "client.OverlayScreenMixin"
     ],
     "mixins": [
-        "GasTankItemMixin",
-        "armor.AdvancedNanoMuscleSuiteMixin",
-        "armor.AdvancedQuarkTechSuiteMixin",
-        "armor.NanoMuscleSuiteMixin",
-        "armor.QuarkTechSuiteMixin"
+        "accessor.ArmorLogicSuiteAccessor",
+        "adastra.GasTankItemMixin"
     ],
     "injectors": {
         "defaultRequire": 1
