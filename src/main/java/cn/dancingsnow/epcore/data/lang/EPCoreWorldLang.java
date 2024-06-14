@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.data.lang;
 
-import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreBiomeDataProvider;
 
 import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;

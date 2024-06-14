@@ -1,7 +1,7 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;

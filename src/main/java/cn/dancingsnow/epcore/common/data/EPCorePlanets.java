@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.api.planets;
+package cn.dancingsnow.epcore.common.data;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 

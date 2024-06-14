@@ -1,7 +1,7 @@
 package cn.dancingsnow.epcore.common.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
 
 import com.gregtechceu.gtceu.api.data.worldgen.GTOreDefinition;
