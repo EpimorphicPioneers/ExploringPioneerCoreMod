@@ -78,7 +78,7 @@ public class PlanetBuilder extends BuilderBase<Planet> {
 
     @Setter
     @Accessors(fluent = true, chain = true)
-    public static class OrbitBuilder {
+    public class OrbitBuilder {
         private ResourceKey<Level> dimension;
         private int solarPower;
         private ResourceLocation galaxy;
@@ -93,7 +93,8 @@ public class PlanetBuilder extends BuilderBase<Planet> {
                     PlanetConstants.SPACE_TEMPERATURE,
                     PlanetConstants.SPACE_GRAVITY,
                     solarPower,
-                    Objects.requireNonNull(galaxy, "Galaxy is not set."),
+                    Objects.requireNonNullElse(
+                            galaxy, Objects.requireNonNull(solarSystem, "Galaxy is not set.")),
                     Optional.empty(),
                     tier,
                     Collections.emptyList());
