@@ -49,9 +49,9 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
                 .orbit(EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8)
                 .buildAndRegister(consumer);
 
-        planetRenderer(EPCorePlanets.TAU_CETI_F_ORBIT)
-                .orbit(EPCoreDimensionRenderingUtils.TAU_CETI_F, 0xff3c7cda, 8)
-                .buildAndRegister(consumer);
+        //        planetRenderer(EPCorePlanets.TAU_CETI_F_ORBIT)
+        //                .orbit(EPCoreDimensionRenderingUtils.TAU_CETI_F, 0xff3c7cda, 8)
+        //                .buildAndRegister(consumer);
     }
 
     private static PlanetRendererBuilder planetRenderer(PlanetKey planet) {
