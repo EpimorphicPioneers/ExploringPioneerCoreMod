@@ -1,7 +1,8 @@
 package cn.dancingsnow.epcore.data.planet;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.registry.PlanetRendererBuilder;
+import cn.dancingsnow.epcore.api.registry.PlanetKey;
+import cn.dancingsnow.epcore.api.registry.builder.PlanetRendererBuilder;
 import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.data.provider.CodecProvider;
 import cn.dancingsnow.epcore.utils.EPCoreDimensionRenderingUtils;
@@ -11,7 +12,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.SimpleWeightedRandomList;
-import net.minecraft.world.level.Level;
 
 import earth.terrarium.adastra.client.dimension.PlanetRenderer;
 import org.jetbrains.annotations.NotNull;
@@ -48,10 +48,14 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
         planetRenderer(EPCorePlanets.DEIMOS_ORBIT)
                 .orbit(EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8)
                 .buildAndRegister(consumer);
+
+        planetRenderer(EPCorePlanets.TAU_CETI_F_ORBIT)
+                .orbit(EPCoreDimensionRenderingUtils.TAU_CETI_F, 0xff3c7cda, 8)
+                .buildAndRegister(consumer);
     }
 
-    private static PlanetRendererBuilder planetRenderer(ResourceKey<Level> dimension) {
-        return PlanetRendererBuilder.of(dimension.location()).dimension(dimension);
+    private static PlanetRendererBuilder planetRenderer(PlanetKey planet) {
+        return PlanetRendererBuilder.of(planet.location()).dimension(planet.dimension());
     }
 
     @Override

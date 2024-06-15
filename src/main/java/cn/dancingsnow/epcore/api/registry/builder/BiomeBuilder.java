@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.api.registry;
+package cn.dancingsnow.epcore.api.registry.builder;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.resources.ResourceKey;

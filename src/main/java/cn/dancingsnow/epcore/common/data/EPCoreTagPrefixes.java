@@ -1,7 +1,7 @@
 package cn.dancingsnow.epcore.common.data;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.registry.OreTagPrefixBuilder;
+import cn.dancingsnow.epcore.api.registry.builder.OreTagPrefixBuilder;
 import cn.dancingsnow.epcore.integration.EPCoreIntegration;
 
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;

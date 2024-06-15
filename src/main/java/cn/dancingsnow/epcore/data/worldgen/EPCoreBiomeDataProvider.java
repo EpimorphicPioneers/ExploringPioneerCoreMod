@@ -1,7 +1,7 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.registry.BiomeBuilder;
+import cn.dancingsnow.epcore.api.registry.builder.BiomeBuilder;
 import cn.dancingsnow.epcore.utils.EPCoreBiomeGenerationSettingsUtils;
 
 import net.minecraft.core.HolderGetter;

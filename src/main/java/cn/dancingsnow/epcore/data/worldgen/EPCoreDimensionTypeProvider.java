@@ -1,27 +1,21 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
-import cn.dancingsnow.epcore.EPCoreMod;
-import cn.dancingsnow.epcore.api.registry.DimensionTypeBuilder;
+import cn.dancingsnow.epcore.api.registry.PlanetKey;
+import cn.dancingsnow.epcore.api.registry.builder.DimensionTypeBuilder;
 
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.dimension.DimensionType;
 
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.CERES;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.CERES_ORBIT;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.DEIMOS;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.DEIMOS_ORBIT;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.GANYMEDE;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.GANYMEDE_ORBIT;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.IO;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.IO_ORBIT;
+
 public class EPCoreDimensionTypeProvider {
-    public static final ResourceKey<DimensionType> DEIMOS = register("deimos");
-    public static final ResourceKey<DimensionType> CERES = register("ceres");
-    public static final ResourceKey<DimensionType> GANYMEDE = register("ganymede");
-    public static final ResourceKey<DimensionType> IO = register("io");
-
-    public static final ResourceKey<DimensionType> DEIMOS_ORBIT = register("deimos_orbit");
-    public static final ResourceKey<DimensionType> CERES_ORBIT = register("ceres_orbit");
-    public static final ResourceKey<DimensionType> GANYMEDE_ORBIT = register("ganymede_orbit");
-    public static final ResourceKey<DimensionType> IO_ORBIT = register("io_orbit");
-
-    private static ResourceKey<DimensionType> register(String path) {
-        return ResourceKey.create(Registries.DIMENSION_TYPE, EPCoreMod.id(path));
-    }
 
     public static void bootstrap(BootstapContext<DimensionType> context) {
         planet(DEIMOS).buildAndRegister(context::register);
@@ -41,7 +35,7 @@ public class EPCoreDimensionTypeProvider {
         planet(IO_ORBIT).buildAndRegister(context::register);
     }
 
-    private static DimensionTypeBuilder planet(ResourceKey<DimensionType> key) {
-        return DimensionTypeBuilder.of(key).effects(key.location()).hasRaids(false);
+    private static DimensionTypeBuilder planet(PlanetKey key) {
+        return DimensionTypeBuilder.of(key.dimensionType()).effects(key.location()).hasRaids(false);
     }
 }

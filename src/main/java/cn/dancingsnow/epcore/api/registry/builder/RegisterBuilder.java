@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.api.registry;
+package cn.dancingsnow.epcore.api.registry.builder;
 
 import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
 

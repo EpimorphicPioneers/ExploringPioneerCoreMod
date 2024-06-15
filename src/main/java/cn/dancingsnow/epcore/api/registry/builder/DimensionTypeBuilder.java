@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.api.registry;
+package cn.dancingsnow.epcore.api.registry.builder;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
