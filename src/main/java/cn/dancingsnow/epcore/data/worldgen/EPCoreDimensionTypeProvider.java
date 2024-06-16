@@ -14,25 +14,23 @@ import static cn.dancingsnow.epcore.common.data.EPCorePlanets.GANYMEDE;
 import static cn.dancingsnow.epcore.common.data.EPCorePlanets.GANYMEDE_ORBIT;
 import static cn.dancingsnow.epcore.common.data.EPCorePlanets.IO;
 import static cn.dancingsnow.epcore.common.data.EPCorePlanets.IO_ORBIT;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.TAU_CETI_F;
+import static cn.dancingsnow.epcore.common.data.EPCorePlanets.TAU_CETI_F_ORBIT;
 
 public class EPCoreDimensionTypeProvider {
 
     public static void bootstrap(BootstapContext<DimensionType> context) {
         planet(DEIMOS).buildAndRegister(context::register);
-
         planet(CERES).buildAndRegister(context::register);
-
         planet(GANYMEDE).buildAndRegister(context::register);
-
         planet(IO).buildAndRegister(context::register);
+        planet(TAU_CETI_F).buildAndRegister(context::register);
 
         planet(DEIMOS_ORBIT).buildAndRegister(context::register);
-
         planet(CERES_ORBIT).buildAndRegister(context::register);
-
         planet(GANYMEDE_ORBIT).buildAndRegister(context::register);
-
         planet(IO_ORBIT).buildAndRegister(context::register);
+        planet(TAU_CETI_F_ORBIT).buildAndRegister(context::register);
     }
 
     private static DimensionTypeBuilder planet(PlanetKey key) {

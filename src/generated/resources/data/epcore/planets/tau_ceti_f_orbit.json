@@ -3,7 +3,7 @@
   "gravity": 0.0,
   "oxygen": false,
   "solar_power": 24,
-  "solar_system": "ad_astra:tau_ceti_system",
+  "solar_system": "epcore:tau_ceti_system",
   "temperature": -270,
   "tier": 6
 }

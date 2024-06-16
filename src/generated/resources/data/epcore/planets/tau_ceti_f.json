@@ -4,7 +4,7 @@
   "orbit": "epcore:tau_ceti_f_orbit",
   "oxygen": false,
   "solar_power": 20,
-  "solar_system": "ad_astra:tau_ceti_system",
+  "solar_system": "epcore:tau_ceti_system",
   "temperature": 40,
   "tier": 6
 }

@@ -7,6 +7,7 @@
     "epcore:ganymede_stone",
     "epcore:ganymede_surface",
     "epcore:io_stone",
-    "epcore:io_surface"
+    "epcore:io_surface",
+    "epcore:tau_ceti_f_stone"
   ]
 }

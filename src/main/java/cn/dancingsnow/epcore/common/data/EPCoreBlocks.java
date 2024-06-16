@@ -95,5 +95,23 @@ public class EPCoreBlocks {
             .simpleItem()
             .register();
 
+    //////////////////////////////////////
+    // *****       TAU_CETI_F     ***** //
+    //////////////////////////////////////
+
+    public static final BlockEntry<Block> TAU_CETI_F_STONE = registrate()
+            .block("tau_ceti_f_stone", Block::new)
+            .initialProperties(() -> Blocks.STONE)
+            .tag(BlockTags.MINEABLE_WITH_PICKAXE, EPCoreTags.Blocks.ORE_REPLACEABLES)
+            .simpleItem()
+            .register();
+
+    public static final BlockEntry<FallingBlock> TAU_CETI_F_SAND = registrate()
+            .block("tau_ceti_f_sand", FallingBlock::new)
+            .initialProperties(() -> Blocks.SAND)
+            .tag(BlockTags.MINEABLE_WITH_SHOVEL)
+            .simpleItem()
+            .register();
+
     public static void init() {}
 }
