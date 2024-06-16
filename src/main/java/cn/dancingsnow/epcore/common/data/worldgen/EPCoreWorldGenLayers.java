@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.common.data.worldgen;
 
-import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
 import cn.dancingsnow.epcore.common.data.EPCoreTags;
 import cn.dancingsnow.epcore.common.worldgen.AnyMatchRuleTest;
 

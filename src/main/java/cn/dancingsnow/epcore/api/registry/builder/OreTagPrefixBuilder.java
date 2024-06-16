@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.api.registry;
+package cn.dancingsnow.epcore.api.registry.builder;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 
@@ -18,29 +18,23 @@ import lombok.experimental.Accessors;
 import java.util.Objects;
 import java.util.function.Supplier;
 
+@Setter
 @Accessors(fluent = true, chain = true)
 public class OreTagPrefixBuilder extends BuilderBase<TagPrefix> {
     public final TagPrefix base;
 
-    @Setter
     public Supplier<BlockState> stateSupplier;
 
-    @Setter
     public Supplier<Material> materialSupplier;
 
-    @Setter
     public ResourceLocation baseModelLocation;
 
-    @Setter
     public Supplier<BlockBehaviour.Properties> templateProperties;
 
-    @Setter
     public boolean doubleDrops;
 
-    @Setter
     public boolean isSand;
 
-    @Setter
     public boolean shouldDropAsItem;
 
     protected OreTagPrefixBuilder(ResourceLocation id, TagKey<Block> miningToolTag, Object... args) {
@@ -53,11 +47,11 @@ public class OreTagPrefixBuilder extends BuilderBase<TagPrefix> {
         this.base = base;
     }
 
-    public static OreTagPrefixBuilder create(String name, TagKey<Block> miningToolTag) {
+    public static OreTagPrefixBuilder of(String name, TagKey<Block> miningToolTag) {
         return new OreTagPrefixBuilder(EPCoreMod.id(name), miningToolTag);
     }
 
-    public static OreTagPrefixBuilder create(TagPrefix base) {
+    public static OreTagPrefixBuilder of(TagPrefix base) {
         return new OreTagPrefixBuilder(EPCoreMod.id(base.name()), base);
     }
 

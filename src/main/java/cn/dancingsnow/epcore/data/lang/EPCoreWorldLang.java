@@ -1,12 +1,12 @@
 package cn.dancingsnow.epcore.data.lang;
 
-import cn.dancingsnow.epcore.api.planets.EPCorePlanets;
-import cn.dancingsnow.epcore.data.provider.worldgen.EPCoreBiomeDataProvider;
+import cn.dancingsnow.epcore.api.registry.PlanetKey;
+import cn.dancingsnow.epcore.common.data.EPCorePlanets;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreBiomeDataProvider;
 
 import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;
 
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.Biome;
 
 public class EPCoreWorldLang {
@@ -37,7 +37,7 @@ public class EPCoreWorldLang {
     }
 
     private static void addPlanetLang(
-            MOLangProvider provider, ResourceKey<Level> planet, String en_name, String cn_name) {
+            MOLangProvider provider, PlanetKey planet, String en_name, String cn_name) {
         var key = "planet.%s.%s"
                 .formatted(planet.location().getNamespace(), planet.location().getPath());
         provider.add(key, en_name, cn_name);

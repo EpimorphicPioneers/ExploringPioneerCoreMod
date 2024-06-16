@@ -1,4 +1,4 @@
-package cn.dancingsnow.epcore.mixins;
+package cn.dancingsnow.epcore.mixins.adastra;
 
 import cn.dancingsnow.epcore.api.item.armor.IOxygenArmor;
 
