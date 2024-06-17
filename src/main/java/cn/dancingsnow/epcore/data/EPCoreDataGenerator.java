@@ -24,10 +24,12 @@ public class EPCoreDataGenerator {
         PackOutput packOutput = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new EPCorePlanetRendererProvider(packOutput, existingFileHelper));
+        generator.addProvider(
+                event.includeClient(), new EPCorePlanetRendererProvider(packOutput, existingFileHelper));
 
         generator.addProvider(
                 event.includeServer(), new EPCoreRegistryProvider(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new EPCorePlanetProvider(packOutput, existingFileHelper));
+        generator.addProvider(
+                event.includeServer(), new EPCorePlanetProvider(packOutput, existingFileHelper));
     }
 }

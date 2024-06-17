@@ -61,7 +61,8 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
-    public BiomeBuilder specialEffects(BiomeSpecialEffects baseEffects, Consumer<BiomeSpecialEffectsBuilder> consumer) {
+    public BiomeBuilder specialEffects(
+            BiomeSpecialEffects baseEffects, Consumer<BiomeSpecialEffectsBuilder> consumer) {
         var builder = BiomeSpecialEffectsBuilder.copyOf(baseEffects);
         builder.ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS);
         consumer.accept(builder);
@@ -90,7 +91,8 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
-    public BiomeBuilder mobSpawnSettings(MobSpawnSettings orig, Consumer<MobSpawnSettingsBuilder> consumer) {
+    public BiomeBuilder mobSpawnSettings(
+            MobSpawnSettings orig, Consumer<MobSpawnSettingsBuilder> consumer) {
         var builder = new MobSpawnSettingsBuilder(orig);
         consumer.accept(builder);
         this.baseBuilder.mobSpawnSettings(builder.build());
@@ -120,7 +122,8 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
-    public BiomeBuilder generationSettings(BiomeGenerationSettings orig, Consumer<BiomeGenerationSettingsBuilder> consumer) {
+    public BiomeBuilder generationSettings(
+            BiomeGenerationSettings orig, Consumer<BiomeGenerationSettingsBuilder> consumer) {
         var builder = new BiomeGenerationSettingsBuilder(orig);
         consumer.accept(builder);
         this.baseBuilder.generationSettings(builder.build());

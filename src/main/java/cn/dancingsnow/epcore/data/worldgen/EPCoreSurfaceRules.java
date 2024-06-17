@@ -1,7 +1,3 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
-public class EPCoreSurfaceRules {
-
-
-
-}
+public class EPCoreSurfaceRules {}

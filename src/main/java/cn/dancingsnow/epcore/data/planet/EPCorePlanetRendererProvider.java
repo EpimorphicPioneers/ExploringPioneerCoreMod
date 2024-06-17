@@ -13,9 +13,9 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import earth.terrarium.adastra.client.dimension.PlanetRenderer;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.BiConsumer;
@@ -41,8 +41,14 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
                     .add(0xFFFF0000, 1) // Bright Red
                     .build();
 
-    public EPCorePlanetRendererProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
-        super(packOutput, existingFileHelper, PackType.CLIENT_RESOURCES, PLANET_REGISTRY, PlanetRenderer.CODEC);
+    public EPCorePlanetRendererProvider(
+            PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(
+                packOutput,
+                existingFileHelper,
+                PackType.CLIENT_RESOURCES,
+                PLANET_REGISTRY,
+                PlanetRenderer.CODEC);
     }
 
     @Override
@@ -51,9 +57,9 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
                 .orbit(EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8)
                 .buildAndRegister(consumer);
 
-//        planetRenderer(EPCorePlanets.TAU_CETI_F_ORBIT)
-//                .orbit(EPCoreDimensionRenderingUtils.TAU_CETI_F, 0xff3c7cda, 8)
-//                .buildAndRegister(consumer);
+        //        planetRenderer(EPCorePlanets.TAU_CETI_F_ORBIT)
+        //                .orbit(EPCoreDimensionRenderingUtils.TAU_CETI_F, 0xff3c7cda, 8)
+        //                .buildAndRegister(consumer);
     }
 
     private static PlanetRendererBuilder planetRenderer(PlanetKey planet) {

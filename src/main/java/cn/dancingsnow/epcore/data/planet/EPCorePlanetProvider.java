@@ -11,9 +11,9 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import earth.terrarium.adastra.api.planets.Planet;
-import net.minecraftforge.common.data.ExistingFileHelper;
 
 import java.util.function.BiConsumer;
 
@@ -70,17 +70,17 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
                         builder.dimension(EPCorePlanets.IO_ORBIT.dimension()).tier(4).solarPower(24))
                 .buildAndRegister(consumer);
 
-//        planet(EPCorePlanets.TAU_CETI_F)
-//                .tier(6)
-//                .temperature(40)
-//                .gravity(9.016F)
-//                .solarPower(20)
-//                .solarSystem(TAU_CETI_SYSTEM)
-//                .orbit(builder -> builder
-//                        .dimension(EPCorePlanets.TAU_CETI_F_ORBIT.dimension())
-//                        .tier(6)
-//                        .solarPower(24))
-//                .buildAndRegister(consumer);
+        //        planet(EPCorePlanets.TAU_CETI_F)
+        //                .tier(6)
+        //                .temperature(40)
+        //                .gravity(9.016F)
+        //                .solarPower(20)
+        //                .solarSystem(TAU_CETI_SYSTEM)
+        //                .orbit(builder -> builder
+        //                        .dimension(EPCorePlanets.TAU_CETI_F_ORBIT.dimension())
+        //                        .tier(6)
+        //                        .solarPower(24))
+        //                .buildAndRegister(consumer);
     }
 
     private static PlanetBuilder planet(PlanetKey planet) {
