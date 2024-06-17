@@ -1,5 +1,6 @@
 package cn.dancingsnow.epcore.api.registry;
 
+import cn.dancingsnow.epcore.EPCoreMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -9,6 +10,7 @@ import net.minecraft.world.level.dimension.LevelStem;
 
 import lombok.Getter;
 import lombok.experimental.Accessors;
+import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
 public class PlanetKey implements Comparable<PlanetKey> {
     @Getter
@@ -18,6 +20,7 @@ public class PlanetKey implements Comparable<PlanetKey> {
     private ResourceKey<Level> dimension;
     private ResourceKey<LevelStem> levelStem;
     private ResourceKey<DimensionType> dimensionType;
+    private ResourceKey<NoiseGeneratorSettings> noiseGeneratorSettings;
 
     public PlanetKey(ResourceLocation location) {
         this.location = location;
@@ -36,6 +39,11 @@ public class PlanetKey implements Comparable<PlanetKey> {
     public ResourceKey<DimensionType> dimensionType() {
         if (dimensionType != null) return dimensionType;
         return dimensionType = ResourceKey.create(Registries.DIMENSION_TYPE, location);
+    }
+
+    public ResourceKey<NoiseGeneratorSettings> noiseGeneratorSettings() {
+        if (noiseGeneratorSettings != null) return noiseGeneratorSettings;
+        return noiseGeneratorSettings = ResourceKey.create(Registries.NOISE_SETTINGS, location);
     }
 
     public String toString() {

@@ -2,18 +2,19 @@ package cn.dancingsnow.epcore.data.worldgen;
 
 import cn.dancingsnow.epcore.EPCoreMod;
 import cn.dancingsnow.epcore.api.registry.builder.BiomeBuilder;
-import cn.dancingsnow.epcore.utils.EPCoreBiomeGenerationSettingsUtils;
 
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.Carvers;
 import net.minecraft.data.worldgen.placement.CavePlacements;
 import net.minecraft.data.worldgen.placement.MiscOverworldPlacements;
 import net.minecraft.data.worldgen.placement.NetherPlacements;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.biome.AmbientParticleSettings;
 import net.minecraft.world.level.biome.Biome;
+import net.minecraft.world.level.biome.BiomeGenerationSettings;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
@@ -59,7 +60,7 @@ public class EPCoreBiomeDataProvider {
                         .waterFogColor(0x50533))
                 .noMobSpawn()
                 .generationSettings(placedFeatures, configuredCarvers, builder -> {
-                    EPCoreBiomeGenerationSettingsUtils.caves(builder);
+                    caves(builder);
                     builder
                             .addFeature(
                                     GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
@@ -84,7 +85,7 @@ public class EPCoreBiomeDataProvider {
                         .waterFogColor(0x50533))
                 .noMobSpawn()
                 .generationSettings(placedFeatures, configuredCarvers, builder -> {
-                    EPCoreBiomeGenerationSettingsUtils.caves(builder);
+                    caves(builder);
                     builder
                             .addFeature(
                                     GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
@@ -113,7 +114,7 @@ public class EPCoreBiomeDataProvider {
                         .waterFogColor(0x50533))
                 .noMobSpawn()
                 .generationSettings(placedFeatures, configuredCarvers, builder -> {
-                    EPCoreBiomeGenerationSettingsUtils.caves(builder);
+                    caves(builder);
                     builder
                             .addFeature(
                                     GenerationStep.Decoration.UNDERGROUND_DECORATION, CavePlacements.LARGE_DRIPSTONE)
@@ -129,5 +130,12 @@ public class EPCoreBiomeDataProvider {
                                     GenerationStep.Decoration.LOCAL_MODIFICATIONS, NetherPlacements.BASALT_PILLAR);
                 })
                 .buildAndRegister(context::register);
+    }
+
+    private static void caves(BiomeGenerationSettings.Builder builder) {
+        builder
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE)
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE_EXTRA_UNDERGROUND)
+                .addCarver(GenerationStep.Carving.AIR, Carvers.CANYON);
     }
 }

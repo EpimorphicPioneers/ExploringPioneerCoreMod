@@ -1,0 +1,11 @@
+{
+  "type": "epcore:tau_ceti_f",
+  "generator": {
+    "type": "minecraft:noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "epcore:space_wastelands"
+    },
+    "settings": "epcore:tau_ceti_f"
+  }
+}

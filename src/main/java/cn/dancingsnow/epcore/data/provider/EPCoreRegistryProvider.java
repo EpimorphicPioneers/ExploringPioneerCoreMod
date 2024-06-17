@@ -5,6 +5,7 @@ import cn.dancingsnow.epcore.data.worldgen.EPCoreBiomeDataProvider;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionProvider;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionTypeProvider;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreNoiseGeneratorSettingsProvider;
+import cn.dancingsnow.epcore.data.worldgen.EPCoreNoiseRouterDataProvider;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
@@ -20,7 +21,8 @@ public class EPCoreRegistryProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.DIMENSION_TYPE, EPCoreDimensionTypeProvider::bootstrap)
             .add(Registries.LEVEL_STEM, EPCoreDimensionProvider::bootstrap)
             .add(Registries.BIOME, EPCoreBiomeDataProvider::bootstrap)
-            .add(Registries.NOISE_SETTINGS, EPCoreNoiseGeneratorSettingsProvider::bootstrap);
+            .add(Registries.NOISE_SETTINGS, EPCoreNoiseGeneratorSettingsProvider::bootstrap)
+            .add(Registries.DENSITY_FUNCTION, EPCoreNoiseRouterDataProvider::bootstrap);
 
     public EPCoreRegistryProvider(
             PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
