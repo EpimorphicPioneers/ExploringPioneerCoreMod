@@ -11,7 +11,9 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
 import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import earth.terrarium.adastra.client.dimension.PlanetRenderer;
 import org.jetbrains.annotations.NotNull;
@@ -39,12 +41,18 @@ public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> 
                     .add(0xFFFF0000, 1) // Bright Red
                     .build();
 
-    public EPCorePlanetRendererProvider(PackOutput packOutput) {
-        super(packOutput, PlanetRenderer.CODEC, PLANET_REGISTRY, PackOutput.Target.RESOURCE_PACK);
+    public EPCorePlanetRendererProvider(
+            PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(
+                packOutput,
+                existingFileHelper,
+                PackType.CLIENT_RESOURCES,
+                PLANET_REGISTRY,
+                PlanetRenderer.CODEC);
     }
 
     @Override
-    protected void build(BiConsumer<ResourceLocation, PlanetRenderer> consumer) {
+    protected void gather(BiConsumer<ResourceLocation, PlanetRenderer> consumer) {
         planetRenderer(EPCorePlanets.DEIMOS_ORBIT)
                 .orbit(EPCoreDimensionRenderingUtils.DEIMOS, 0xff3c7cda, 8)
                 .buildAndRegister(consumer);

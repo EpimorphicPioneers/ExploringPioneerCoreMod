@@ -11,6 +11,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.data.ExistingFileHelper;
 
 import earth.terrarium.adastra.api.planets.Planet;
 
@@ -23,12 +24,12 @@ public class EPCorePlanetProvider extends CodecProvider<Planet> {
     public static final ResourceLocation SOLAR_SYSTEM = EPCoreIntegration.ad("solar_system");
     public static final ResourceLocation TAU_CETI_SYSTEM = EPCoreMod.id("tau_ceti_system");
 
-    public EPCorePlanetProvider(PackOutput packOutput) {
-        super(packOutput, Planet.CODEC, PLANET_REGISTRY);
+    public EPCorePlanetProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(packOutput, existingFileHelper, PLANET_REGISTRY, Planet.CODEC);
     }
 
     @Override
-    protected void build(BiConsumer<ResourceLocation, Planet> consumer) {
+    protected void gather(BiConsumer<ResourceLocation, Planet> consumer) {
         planet(EPCorePlanets.DEIMOS)
                 .tier(2)
                 .temperature(-75)
