@@ -38,12 +38,7 @@ public class EPCoreBiomeDataProvider {
                 .hasPrecipitation(false)
                 .temperature(0.5f)
                 .downfall(0)
-                .specialEffects(builder -> builder
-                        .skyColor(0x000000)
-                        .fogColor(0x000000)
-                        .ambientParticle(new AmbientParticleSettings(ParticleTypes.CRIMSON_SPORE, 0.014f))
-                        .waterColor(0x3f76e4)
-                        .waterFogColor(0x50533))
+                .noSpecialEffects()
                 .noMobSpawn()
                 .noGeneration(placedFeatures, configuredCarvers)
                 .buildAndRegister(context::register);

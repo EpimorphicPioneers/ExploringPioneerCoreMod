@@ -9,6 +9,9 @@ import net.minecraft.world.level.biome.BiomeSpecialEffects;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.common.world.BiomeGenerationSettingsBuilder;
+import net.minecraftforge.common.world.BiomeSpecialEffectsBuilder;
+import net.minecraftforge.common.world.MobSpawnSettingsBuilder;
 
 import java.util.function.Consumer;
 
@@ -40,17 +43,35 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
+    public BiomeBuilder noSpecialEffects() {
+        this.baseBuilder.specialEffects(getSpecialEffectsBuilder().build());
+        return this;
+    }
+
     public BiomeBuilder specialEffects(BiomeSpecialEffects effects) {
         this.baseBuilder.specialEffects(effects);
         return this;
     }
 
-    public BiomeBuilder specialEffects(Consumer<BiomeSpecialEffects.Builder> consumer) {
-        var builder = new BiomeSpecialEffects.Builder();
+    public BiomeBuilder specialEffects(Consumer<BiomeSpecialEffectsBuilder> consumer) {
+        var builder = getSpecialEffectsBuilder();
         builder.ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS);
         consumer.accept(builder);
         this.baseBuilder.specialEffects(builder.build());
         return this;
+    }
+
+    public BiomeBuilder specialEffects(
+            BiomeSpecialEffects baseEffects, Consumer<BiomeSpecialEffectsBuilder> consumer) {
+        var builder = BiomeSpecialEffectsBuilder.copyOf(baseEffects);
+        builder.ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS);
+        consumer.accept(builder);
+        this.baseBuilder.specialEffects(builder.build());
+        return this;
+    }
+
+    private BiomeSpecialEffectsBuilder getSpecialEffectsBuilder() {
+        return BiomeSpecialEffectsBuilder.create(0x000000, 0x000000, 0x3f76e4, 0x50533);
     }
 
     public BiomeBuilder noMobSpawn() {
@@ -70,6 +91,22 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
+    public BiomeBuilder mobSpawnSettings(
+            MobSpawnSettings orig, Consumer<MobSpawnSettingsBuilder> consumer) {
+        var builder = new MobSpawnSettingsBuilder(orig);
+        consumer.accept(builder);
+        this.baseBuilder.mobSpawnSettings(builder.build());
+        return this;
+    }
+
+    public BiomeBuilder noGeneration(
+            HolderGetter<PlacedFeature> placedFeatures,
+            HolderGetter<ConfiguredWorldCarver<?>> worldCarvers) {
+        this.baseBuilder.generationSettings(
+                new BiomeGenerationSettings.Builder(placedFeatures, worldCarvers).build());
+        return this;
+    }
+
     public BiomeBuilder generationSettings(BiomeGenerationSettings generationSettings) {
         this.baseBuilder.generationSettings(generationSettings);
         return this;
@@ -85,11 +122,11 @@ public class BiomeBuilder extends KeyRegisterBuilder<Biome> {
         return this;
     }
 
-    public BiomeBuilder noGeneration(
-            HolderGetter<PlacedFeature> placedFeatures,
-            HolderGetter<ConfiguredWorldCarver<?>> worldCarvers) {
-        this.baseBuilder.generationSettings(
-                new BiomeGenerationSettings.Builder(placedFeatures, worldCarvers).build());
+    public BiomeBuilder generationSettings(
+            BiomeGenerationSettings orig, Consumer<BiomeGenerationSettingsBuilder> consumer) {
+        var builder = new BiomeGenerationSettingsBuilder(orig);
+        consumer.accept(builder);
+        this.baseBuilder.generationSettings(builder.build());
         return this;
     }
 
