@@ -1,16 +1,15 @@
 package cn.dancingsnow.epcore.api.registry;
 
-import cn.dancingsnow.epcore.EPCoreMod;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
+import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
 import lombok.Getter;
 import lombok.experimental.Accessors;
-import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
 
 public class PlanetKey implements Comparable<PlanetKey> {
     @Getter

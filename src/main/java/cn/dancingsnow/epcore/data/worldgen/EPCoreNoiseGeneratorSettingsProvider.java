@@ -47,20 +47,20 @@ public class EPCoreNoiseGeneratorSettingsProvider {
                         false,
                         false));
 
-        context.register(
-                TAU_CETI_F.noiseGeneratorSettings(),
-                new NoiseGeneratorSettings(
-                        SIMPLE_NOISE_SETTINGS,
-                        Blocks.AIR.defaultBlockState(),
-                        Blocks.AIR.defaultBlockState(),
-                        EPCoreNoiseRouterDataProvider.planet(densityFunctions, noises),
-                        SurfaceRuleData.air(),
-                        List.of(),
-                        0,
-                        true,
-                        false,
-                        false,
-                        false));
+//        context.register(
+//                TAU_CETI_F.noiseGeneratorSettings(),
+//                new NoiseGeneratorSettings(
+//                        SIMPLE_NOISE_SETTINGS,
+//                        Blocks.AIR.defaultBlockState(),
+//                        Blocks.AIR.defaultBlockState(),
+//                        EPCoreNoiseRouterData.planet(densityFunctions, noises),
+//                        SurfaceRuleData.air(),
+//                        List.of(),
+//                        0,
+//                        true,
+//                        false,
+//                        false,
+//                        false));
     }
 
     public static NoiseRouter none() {

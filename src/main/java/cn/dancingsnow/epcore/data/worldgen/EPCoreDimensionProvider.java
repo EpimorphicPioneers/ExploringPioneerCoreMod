@@ -11,10 +11,8 @@ import net.minecraft.world.level.biome.BiomeSource;
 import net.minecraft.world.level.biome.FixedBiomeSource;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
-import net.minecraft.world.level.levelgen.DensityFunction;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
-import net.minecraft.world.level.levelgen.synth.NormalNoise;
 
 import static cn.dancingsnow.epcore.common.data.EPCorePlanets.CERES_ORBIT;
 import static cn.dancingsnow.epcore.common.data.EPCorePlanets.DEIMOS_ORBIT;
@@ -37,11 +35,12 @@ public class EPCoreDimensionProvider {
         space(context, IO_ORBIT, dimensionTypes, biomes, noiseSettings);
         space(context, TAU_CETI_F_ORBIT, dimensionTypes, biomes, noiseSettings);
 
-                planet(
-                        context,
-                        TAU_CETI_F,
-                        new FixedBiomeSource(biomes.getOrThrow(SPACE_WASTELANDS)), noiseSettings.getOrThrow(TAU_CETI_F.noiseGeneratorSettings()),
-                        dimensionTypes);
+        planet(
+                context,
+                TAU_CETI_F,
+                new FixedBiomeSource(biomes.getOrThrow(SPACE_WASTELANDS)),
+                noiseSettings.getOrThrow(TAU_CETI_F.noiseGeneratorSettings()),
+                dimensionTypes);
     }
 
     private static void space(
