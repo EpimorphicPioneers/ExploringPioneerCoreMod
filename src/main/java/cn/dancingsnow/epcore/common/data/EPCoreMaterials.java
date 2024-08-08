@@ -1,7 +1,7 @@
 package cn.dancingsnow.epcore.common.data;
 
-import cn.dancingsnow.epcore.common.materials.SecondDegreeMaterials;
-import cn.dancingsnow.epcore.common.materials.TwilightForestMaterials;
+import cn.dancingsnow.epcore.common.data.materials.SecondDegreeMaterials;
+import cn.dancingsnow.epcore.common.data.materials.TwilightForestMaterials;
 
 import com.gregtechceu.gtceu.GTCEu;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;

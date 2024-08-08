@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.data.provider;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreBiomeDataProvider;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionProvider;
 import cn.dancingsnow.epcore.data.worldgen.EPCoreDimensionTypeProvider;
@@ -24,6 +24,6 @@ public class EPCoreRegistryProvider extends DatapackBuiltinEntriesProvider {
 
     public EPCoreRegistryProvider(
             PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(EPCoreMod.MODID));
+        super(output, registries, BUILDER, Set.of(EPCore.MOD_ID));
     }
 }

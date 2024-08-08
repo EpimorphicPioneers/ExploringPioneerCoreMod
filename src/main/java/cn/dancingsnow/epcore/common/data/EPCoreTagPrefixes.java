@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.common.data;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.api.registry.builder.OreTagPrefixBuilder;
 import cn.dancingsnow.epcore.integration.EPCoreIntegration;
 
@@ -60,27 +60,27 @@ public class EPCoreTagPrefixes {
                     "deimos_stone", "Deimos Stone %s Ore", "火卫二%s矿石")
             .stateSupplier(() -> EPCoreBlocks.DEIMOS_STONE.get().defaultBlockState())
             .materialSupplier(() -> GTMaterials.Stone)
-            .baseModelLocation(EPCoreMod.id("block/deimos_stone"))
+            .baseModelLocation(EPCore.id("block/deimos_stone"))
             .register();
 
     public static final TagPrefix oreCeresStone = oreTagPrefix(
                     "ceres_stone", "Ceres Stone %s Ore", "谷神星%s矿石")
             .stateSupplier(() -> EPCoreBlocks.CERES_STONE.get().defaultBlockState())
             .materialSupplier(() -> GTMaterials.Stone)
-            .baseModelLocation(EPCoreMod.id("block/ceres_stone"))
+            .baseModelLocation(EPCore.id("block/ceres_stone"))
             .register();
 
     public static final TagPrefix oreGanymedeStone = oreTagPrefix(
                     "ganymede_stone", "Ganymede Stone %s Ore", "木卫三%s矿石")
             .stateSupplier(() -> EPCoreBlocks.GANYMEDE_STONE.get().defaultBlockState())
             .materialSupplier(() -> GTMaterials.Stone)
-            .baseModelLocation(EPCoreMod.id("block/ganymede_stone"))
+            .baseModelLocation(EPCore.id("block/ganymede_stone"))
             .register();
 
     public static final TagPrefix oreIoStone = oreTagPrefix("io_stone", "Io Stone %s Ore", "木卫一%s矿石")
             .stateSupplier(() -> EPCoreBlocks.IO_STONE.get().defaultBlockState())
             .materialSupplier(() -> GTMaterials.Stone)
-            .baseModelLocation(EPCoreMod.id("block/io_stone"))
+            .baseModelLocation(EPCore.id("block/io_stone"))
             .register();
 
     private static OreTagPrefixBuilder oreTagPrefix(String name, String en_lang, String cn_lang) {

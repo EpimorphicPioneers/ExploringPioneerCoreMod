@@ -1,16 +1,25 @@
 package cn.dancingsnow.epcore;
 
+import cn.dancingsnow.epcore.common.data.EPCoreTagPrefixes;
 import cn.dancingsnow.epcore.common.data.worldgen.EPCoreOreVeins;
 
-import com.epimorphismmc.monomorphism.MOGTAddon;
-
+import cn.dancingsnow.epcore.common.data.worldgen.EPCoreWorldGenLayers;
 import com.gregtechceu.gtceu.api.addon.GTAddon;
+import com.gregtechceu.gtceu.api.addon.IGTAddon;
+import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 @GTAddon
-public class EPCoreGTAddon extends MOGTAddon {
+public class EPCoreGTAddon implements IGTAddon {
 
-    public EPCoreGTAddon() {
-        super(EPCoreMod.MODID);
+
+    @Override
+    public String addonModId() {
+        return EPCore.MOD_ID;
+    }
+
+    @Override
+    public GTRegistrate getRegistrate() {
+        return EPCoreCommon.registrate();
     }
 
     @Override
@@ -18,7 +27,16 @@ public class EPCoreGTAddon extends MOGTAddon {
 
     @Override
     public void registerOreVeins() {
-        super.registerOreVeins();
         EPCoreOreVeins.init();
+    }
+
+    @Override
+    public void registerWorldgenLayers() {
+        EPCoreWorldGenLayers.init();
+    }
+
+    @Override
+    public void registerTagPrefixes() {
+        EPCoreTagPrefixes.init();
     }
 }

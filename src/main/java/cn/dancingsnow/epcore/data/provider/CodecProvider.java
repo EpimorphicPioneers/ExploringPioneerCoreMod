@@ -1,7 +1,6 @@
 package cn.dancingsnow.epcore.data.provider;
 
-import cn.dancingsnow.epcore.EPCoreMod;
-
+import cn.dancingsnow.epcore.EPCore;
 import net.minecraft.core.Registry;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
@@ -25,7 +24,7 @@ public abstract class CodecProvider<T> extends JsonCodecProvider<T> {
         super(
                 output,
                 existingFileHelper,
-                EPCoreMod.MODID,
+                EPCore.MOD_ID,
                 JsonOps.INSTANCE,
                 packType,
                 registry.location().getPath(),
@@ -41,7 +40,7 @@ public abstract class CodecProvider<T> extends JsonCodecProvider<T> {
         super(
                 output,
                 existingFileHelper,
-                EPCoreMod.MODID,
+                EPCore.MOD_ID,
                 JsonOps.INSTANCE,
                 PackType.SERVER_DATA,
                 registry.location().getPath(),

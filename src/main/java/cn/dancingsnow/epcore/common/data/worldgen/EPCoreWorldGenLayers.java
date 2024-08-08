@@ -21,7 +21,7 @@ import java.util.Set;
 public class EPCoreWorldGenLayers {
     public static final IWorldGenLayer ALL = new SimpleWorldGenLayer(
             "all",
-            () -> new AnyMatchRuleTest(List.of(
+            () -> new AnyMatchRuleTest(
                     new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES),
                     new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES),
                     new TagMatchTest(BlockTags.NETHER_CARVER_REPLACEABLES),
@@ -31,7 +31,7 @@ public class EPCoreWorldGenLayers {
                     new TagMatchTest(ModBlockTags.MARS_STONE_REPLACEABLES),
                     new TagMatchTest(ModBlockTags.MERCURY_STONE_REPLACEABLES),
                     new TagMatchTest(ModBlockTags.GLACIO_STONE_REPLACEABLES),
-                    new TagMatchTest(EPCoreTags.Blocks.ORE_REPLACEABLES))),
+                    new TagMatchTest(EPCoreTags.Blocks.ORE_REPLACEABLES)),
             Set.of(
                     Level.OVERWORLD.location(),
                     Level.NETHER.location(),
@@ -46,5 +46,6 @@ public class EPCoreWorldGenLayers {
                     EPCorePlanets.GANYMEDE.location(),
                     EPCorePlanets.IO.location()));
 
-    public static void init() {}
+    public static void init() {
+    }
 }

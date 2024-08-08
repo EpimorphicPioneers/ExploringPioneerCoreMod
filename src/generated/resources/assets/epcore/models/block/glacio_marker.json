@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "gui_light": "front",
+  "textures": {
+    "down": "epcore:block/dim_markers/glacio/down",
+    "east": "epcore:block/dim_markers/glacio/east",
+    "north": "epcore:block/dim_markers/glacio/north",
+    "particle": "#north",
+    "south": "epcore:block/dim_markers/glacio/south",
+    "up": "epcore:block/dim_markers/glacio/up",
+    "west": "epcore:block/dim_markers/glacio/west"
+  }
+}

@@ -1,7 +1,6 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
-import cn.dancingsnow.epcore.EPCoreMod;
-
+import cn.dancingsnow.epcore.EPCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.SurfaceRuleData;
@@ -20,7 +19,7 @@ public class EPCoreNoiseGeneratorSettingsProvider {
     protected static final NoiseSettings SIMPLE_NOISE_SETTINGS = NoiseSettings.create(0, 256, 2, 1);
 
     private static ResourceKey<NoiseGeneratorSettings> register(String name) {
-        return ResourceKey.create(Registries.NOISE_SETTINGS, EPCoreMod.id(name));
+        return ResourceKey.create(Registries.NOISE_SETTINGS, EPCore.id(name));
     }
 
     public static void bootstrap(BootstapContext<NoiseGeneratorSettings> context) {

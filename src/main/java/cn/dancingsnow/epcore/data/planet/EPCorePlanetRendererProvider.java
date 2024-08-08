@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.data.planet;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.api.registry.PlanetKey;
 import cn.dancingsnow.epcore.api.registry.builder.PlanetRendererBuilder;
 import cn.dancingsnow.epcore.common.data.EPCorePlanets;
@@ -23,7 +23,7 @@ import java.util.function.BiConsumer;
 public class EPCorePlanetRendererProvider extends CodecProvider<PlanetRenderer> {
 
     public static final ResourceKey<Registry<PlanetRenderer>> PLANET_REGISTRY =
-            ResourceKey.createRegistryKey(EPCoreMod.id("planet_renderers"));
+            ResourceKey.createRegistryKey(EPCore.id("planet_renderers"));
 
     public static final int DEFAULT_SUNRISE_COLOR = 0xd85f33;
 

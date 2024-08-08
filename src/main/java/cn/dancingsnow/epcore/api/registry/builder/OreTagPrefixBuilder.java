@@ -1,7 +1,6 @@
 package cn.dancingsnow.epcore.api.registry.builder;
 
-import cn.dancingsnow.epcore.EPCoreMod;
-
+import cn.dancingsnow.epcore.EPCore;
 import com.gregtechceu.gtceu.api.data.chemical.material.Material;
 import com.gregtechceu.gtceu.api.data.tag.TagPrefix;
 import com.gregtechceu.gtceu.api.registry.registrate.BuilderBase;
@@ -48,11 +47,11 @@ public class OreTagPrefixBuilder extends BuilderBase<TagPrefix> {
     }
 
     public static OreTagPrefixBuilder of(String name, TagKey<Block> miningToolTag) {
-        return new OreTagPrefixBuilder(EPCoreMod.id(name), miningToolTag);
+        return new OreTagPrefixBuilder(EPCore.id(name), miningToolTag);
     }
 
     public static OreTagPrefixBuilder of(TagPrefix base) {
-        return new OreTagPrefixBuilder(EPCoreMod.id(base.name()), base);
+        return new OreTagPrefixBuilder(EPCore.id(base.name()), base);
     }
 
     @Override

@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.FallingBlock;
 
 import com.tterrag.registrate.util.entry.BlockEntry;
 
-import static cn.dancingsnow.epcore.EPCoreMod.registrate;
+import static cn.dancingsnow.epcore.EPCoreCommon.registrate;
 
 @SuppressWarnings("unused")
 public class EPCoreBlocks {

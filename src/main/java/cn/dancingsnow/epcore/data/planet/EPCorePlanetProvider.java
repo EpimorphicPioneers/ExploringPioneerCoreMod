@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.data.planet;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.api.registry.PlanetKey;
 import cn.dancingsnow.epcore.api.registry.builder.PlanetBuilder;
 import cn.dancingsnow.epcore.common.data.EPCorePlanets;
@@ -19,10 +19,10 @@ import java.util.function.BiConsumer;
 
 public class EPCorePlanetProvider extends CodecProvider<Planet> {
     public static final ResourceKey<Registry<Planet>> PLANET_REGISTRY =
-            ResourceKey.createRegistryKey(EPCoreMod.id("planets"));
+            ResourceKey.createRegistryKey(EPCore.id("planets"));
 
     public static final ResourceLocation SOLAR_SYSTEM = EPCoreIntegration.ad("solar_system");
-    public static final ResourceLocation TAU_CETI_SYSTEM = EPCoreMod.id("tau_ceti_system");
+    public static final ResourceLocation TAU_CETI_SYSTEM = EPCore.id("tau_ceti_system");
 
     public EPCorePlanetProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
         super(packOutput, existingFileHelper, PLANET_REGISTRY, Planet.CODEC);

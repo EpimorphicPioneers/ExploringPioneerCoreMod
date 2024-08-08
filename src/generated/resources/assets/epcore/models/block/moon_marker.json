@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "gui_light": "front",
+  "textures": {
+    "down": "epcore:block/dim_markers/moon/down",
+    "east": "epcore:block/dim_markers/moon/east",
+    "north": "epcore:block/dim_markers/moon/north",
+    "particle": "#north",
+    "south": "epcore:block/dim_markers/moon/south",
+    "up": "epcore:block/dim_markers/moon/up",
+    "west": "epcore:block/dim_markers/moon/west"
+  }
+}

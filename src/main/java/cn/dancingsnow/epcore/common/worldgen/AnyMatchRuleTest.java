@@ -8,6 +8,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTestType;
 import com.mojang.serialization.Codec;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class AnyMatchRuleTest extends RuleTest {
@@ -25,6 +26,10 @@ public class AnyMatchRuleTest extends RuleTest {
 
     public AnyMatchRuleTest(List<RuleTest> rules) {
         this.rules = rules;
+    }
+
+    public AnyMatchRuleTest(RuleTest... rules) {
+        this(Arrays.asList(rules));
     }
 
     @Override

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "gui_light": "front",
+  "textures": {
+    "down": "epcore:block/dim_markers/io/down",
+    "east": "epcore:block/dim_markers/io/east",
+    "north": "epcore:block/dim_markers/io/north",
+    "particle": "#north",
+    "south": "epcore:block/dim_markers/io/south",
+    "up": "epcore:block/dim_markers/io/up",
+    "west": "epcore:block/dim_markers/io/west"
+  }
+}

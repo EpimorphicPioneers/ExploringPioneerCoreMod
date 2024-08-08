@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.common.data;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.api.registry.PlanetKey;
 
 public class EPCorePlanets {
@@ -17,6 +17,6 @@ public class EPCorePlanets {
     public static final PlanetKey TAU_CETI_F_ORBIT = create("tau_ceti_f_orbit");
 
     private static PlanetKey create(String path) {
-        return new PlanetKey(EPCoreMod.id(path));
+        return new PlanetKey(EPCore.id(path));
     }
 }

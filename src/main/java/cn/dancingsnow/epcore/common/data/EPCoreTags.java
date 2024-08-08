@@ -1,7 +1,6 @@
 package cn.dancingsnow.epcore.common.data;
 
-import cn.dancingsnow.epcore.EPCoreMod;
-
+import cn.dancingsnow.epcore.EPCore;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
@@ -18,7 +17,7 @@ public class EPCoreTags {
         }
 
         private static TagKey<Item> mod(String path) {
-            return TagKey.create(Registries.ITEM, EPCoreMod.id(path));
+            return TagKey.create(Registries.ITEM, EPCore.id(path));
         }
     }
 
@@ -31,7 +30,7 @@ public class EPCoreTags {
         }
 
         private static TagKey<Block> mod(String path) {
-            return TagKey.create(Registries.BLOCK, EPCoreMod.id(path));
+            return TagKey.create(Registries.BLOCK, EPCore.id(path));
         }
     }
 }

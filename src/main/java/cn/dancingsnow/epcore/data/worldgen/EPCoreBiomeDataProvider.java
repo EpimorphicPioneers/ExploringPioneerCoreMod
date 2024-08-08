@@ -1,6 +1,6 @@
 package cn.dancingsnow.epcore.data.worldgen;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
 import cn.dancingsnow.epcore.api.registry.builder.BiomeBuilder;
 import cn.dancingsnow.epcore.utils.EPCoreBiomeGenerationSettingsUtils;
 
@@ -25,7 +25,7 @@ public class EPCoreBiomeDataProvider {
     public static final ResourceKey<Biome> IO_ASH = register("io_ash");
 
     private static ResourceKey<Biome> register(String name) {
-        return ResourceKey.create(Registries.BIOME, EPCoreMod.id(name));
+        return ResourceKey.create(Registries.BIOME, EPCore.id(name));
     }
 
     public static void bootstrap(BootstapContext<Biome> context) {

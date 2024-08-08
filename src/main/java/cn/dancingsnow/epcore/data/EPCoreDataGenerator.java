@@ -1,10 +1,14 @@
 package cn.dancingsnow.epcore.data;
 
-import cn.dancingsnow.epcore.EPCoreMod;
+import cn.dancingsnow.epcore.EPCore;
+import cn.dancingsnow.epcore.data.lang.EPCoreLangHandler;
 import cn.dancingsnow.epcore.data.planet.EPCorePlanetProvider;
 import cn.dancingsnow.epcore.data.planet.EPCorePlanetRendererProvider;
 import cn.dancingsnow.epcore.data.provider.EPCoreRegistryProvider;
 
+import cn.dancingsnow.epcore.data.tag.EPCoreTagHandler;
+import com.epimorphismmc.monomorphism.registry.registrate.providers.MOProviderTypes;
+import com.tterrag.registrate.providers.ProviderType;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -15,8 +19,16 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = EPCoreMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+import static cn.dancingsnow.epcore.EPCoreCommon.registrate;
+
+@Mod.EventBusSubscriber(modid = EPCore.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EPCoreDataGenerator {
+
+    public static void init() {
+        registrate().addDataGenerator(MOProviderTypes.MO_LANG, EPCoreLangHandler::init);
+        registrate().addDataGenerator(ProviderType.ITEM_TAGS, EPCoreTagHandler::init);
+    }
+
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();

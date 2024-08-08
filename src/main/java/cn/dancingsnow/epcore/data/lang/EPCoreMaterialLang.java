@@ -1,8 +1,8 @@
 package cn.dancingsnow.epcore.data.lang;
 
 import cn.dancingsnow.epcore.common.data.EPCoreMaterials;
+import com.epimorphismmc.monomorphism.registry.registrate.providers.MOLangProvider;
 
-import com.epimorphismmc.monomorphism.datagen.lang.MOLangProvider;
 
 public class EPCoreMaterialLang {
     public static void init(MOLangProvider provider) {
