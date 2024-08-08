@@ -45,6 +45,7 @@ dependencyResolutionManagement {
         def shimmerVersion = "0.2.4"
         def monomorphismLibVersion = "1.1.1-build.31"
         def spotlessVersion = "7.0.0.BETA1"
+        def lombokPluginVersion = "8.7.1"
 
         forge {
             version("forgeShortVersion", forgeVersion)
@@ -122,6 +123,9 @@ dependencyResolutionManagement {
 
             def spotless = version("spotless", spotlessVersion)
             plugin("spotless", "com.diffplug.spotless").versionRef(spotless)
+
+            def lombok = version("lombok", lombokPluginVersion)
+            plugin("lombok", "io.freefair.lombok").versionRef(lombok)
         }
     }
 }
