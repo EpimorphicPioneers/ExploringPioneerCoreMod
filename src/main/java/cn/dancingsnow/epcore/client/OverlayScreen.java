@@ -1,17 +1,20 @@
 package cn.dancingsnow.epcore.client;
 
 import cn.dancingsnow.epcore.api.item.armor.IOxygenArmor;
+
 import com.gregtechceu.gtceu.api.item.armor.ArmorComponentItem;
-import com.mojang.blaze3d.vertex.PoseStack;
-import earth.terrarium.adastra.api.systems.PlanetData;
-import earth.terrarium.adastra.client.config.AdAstraConfigClient;
-import earth.terrarium.adastra.client.utils.ClientData;
-import earth.terrarium.adastra.common.items.armor.SpaceSuitItem;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.item.ItemStack;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import earth.terrarium.adastra.api.systems.PlanetData;
+import earth.terrarium.adastra.client.config.AdAstraConfigClient;
+import earth.terrarium.adastra.client.utils.ClientData;
+import earth.terrarium.adastra.common.items.armor.SpaceSuitItem;
 
 import static earth.terrarium.adastra.client.screens.player.OverlayScreen.OXYGEN_TANK;
 import static earth.terrarium.adastra.client.screens.player.OverlayScreen.OXYGEN_TANK_EMPTY;

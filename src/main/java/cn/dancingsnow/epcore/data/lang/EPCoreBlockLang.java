@@ -1,10 +1,9 @@
 package cn.dancingsnow.epcore.data.lang;
 
 import cn.dancingsnow.epcore.common.data.EPCoreBlocks;
-
 import cn.dancingsnow.epcore.common.data.EPCoreDimensionMarkers;
-import com.epimorphismmc.monomorphism.registry.registrate.providers.MOLangProvider;
 
+import com.epimorphismmc.monomorphism.registry.registrate.providers.MOLangProvider;
 
 public class EPCoreBlockLang {
     public static void init(MOLangProvider provider) {

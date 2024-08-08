@@ -1,6 +1,7 @@
 package cn.dancingsnow.epcore.config;
 
 import cn.dancingsnow.epcore.EPCore;
+
 import dev.toma.configuration.Configuration;
 import dev.toma.configuration.config.Config;
 import dev.toma.configuration.config.format.ConfigFormats;

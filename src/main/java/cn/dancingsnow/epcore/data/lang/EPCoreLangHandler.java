@@ -1,12 +1,12 @@
 package cn.dancingsnow.epcore.data.lang;
 
 import cn.dancingsnow.epcore.common.data.EPCoreTagPrefixes;
+
 import com.epimorphismmc.monomorphism.registry.registrate.providers.MOLangProvider;
 
 public class EPCoreLangHandler {
 
-    private EPCoreLangHandler() {
-    }
+    private EPCoreLangHandler() {}
 
     public static void init(MOLangProvider provider) {
         EPCoreBlockLang.init(provider);

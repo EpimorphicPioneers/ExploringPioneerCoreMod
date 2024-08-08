@@ -54,7 +54,8 @@ public class EPCoreOreVeinLang {
         addOreVeinLang(provider, "scheelite_small", "Scheelite veins", "白钨矿脉");
     }
 
-    public static void addOreVeinLang(MOLangProvider provider, String key, String en_name, String cn_name) {
+    public static void addOreVeinLang(
+            MOLangProvider provider, String key, String en_name, String cn_name) {
         provider.add("gtceu.jei.ore_vein." + key, en_name, cn_name);
     }
 }

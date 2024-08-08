@@ -15,7 +15,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import earth.terrarium.adastra.api.planets.Planet;
 import earth.terrarium.adastra.common.tags.ModBlockTags;
 
-import java.util.List;
 import java.util.Set;
 
 public class EPCoreWorldGenLayers {
@@ -46,6 +45,5 @@ public class EPCoreWorldGenLayers {
                     EPCorePlanets.GANYMEDE.location(),
                     EPCorePlanets.IO.location()));
 
-    public static void init() {
-    }
+    public static void init() {}
 }

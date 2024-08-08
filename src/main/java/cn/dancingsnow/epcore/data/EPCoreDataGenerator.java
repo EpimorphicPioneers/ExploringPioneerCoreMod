@@ -5,10 +5,10 @@ import cn.dancingsnow.epcore.data.lang.EPCoreLangHandler;
 import cn.dancingsnow.epcore.data.planet.EPCorePlanetProvider;
 import cn.dancingsnow.epcore.data.planet.EPCorePlanetRendererProvider;
 import cn.dancingsnow.epcore.data.provider.EPCoreRegistryProvider;
-
 import cn.dancingsnow.epcore.data.tag.EPCoreTagHandler;
+
 import com.epimorphismmc.monomorphism.registry.registrate.providers.MOProviderTypes;
-import com.tterrag.registrate.providers.ProviderType;
+
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -16,6 +16,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+
+import com.tterrag.registrate.providers.ProviderType;
 
 import java.util.concurrent.CompletableFuture;
 
